@@ -110,28 +110,28 @@ namespace ModbusToMQTT
                 //根据需要制定日志列数，此处示例为两列
                 gDtLogInfo.Columns.Add("Cycle Counter");
                 gDtLogInfo.Columns[0].DataType = Type.GetType("System.Int32");
-                gDtLogInfo.Columns.Add("Energy");
-                gDtLogInfo.Columns[1].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Trigger Pressure");
-                gDtLogInfo.Columns[2].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Weld Pressure");
-                gDtLogInfo.Columns[3].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Amplitude");
+                gDtLogInfo.Columns.Add("Energy\n(J)");
+                gDtLogInfo.Columns[1].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Trigger Pressure\n(mBar)");
+                gDtLogInfo.Columns[2].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Weld Pressure\n(mBar)");
+                gDtLogInfo.Columns[3].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Amplitude\n(μm)");
                 gDtLogInfo.Columns[4].DataType = Type.GetType("System.Int32");
-                gDtLogInfo.Columns.Add("Weld Time");
-                gDtLogInfo.Columns[5].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Peak Power");
-                gDtLogInfo.Columns[6].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Preheight");
-                gDtLogInfo.Columns[7].DataType = Type.GetType("System.String");
-                gDtLogInfo.Columns.Add("Post Height");
-                gDtLogInfo.Columns[8].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Weld Time\n(ms)");
+                gDtLogInfo.Columns[5].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Peak Power\n(W)");
+                gDtLogInfo.Columns[6].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Preheight\n(μm)");
+                gDtLogInfo.Columns[7].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Post Height\n(μm)");
+                gDtLogInfo.Columns[8].DataType = Type.GetType("System.Int32");
                 gDtLogInfo.Columns.Add("Error");
                 gDtLogInfo.Columns[9].DataType = Type.GetType("System.String");
                 gDtLogInfo.Columns.Add("Result");
                 gDtLogInfo.Columns[10].DataType = Type.GetType("System.String");
                 gDtLogInfo.Columns.Add("Repeat Cycle");
-                gDtLogInfo.Columns[11].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns[11].DataType = Type.GetType("System.Int32");
                 //将数据源绑定，这样更新gDtLogInfo即可
                 grdHisLog.DataSource = gDtLogInfo;
 
@@ -461,7 +461,6 @@ namespace ModbusToMQTT
                     //每天清理一次内存
                     ClearMemory();
                     gClearMemoryCount = 0;
-
 
                 }
                 else
@@ -1091,22 +1090,21 @@ namespace ModbusToMQTT
 
         public void InitRecipeTable()
         {
-
             string[] str =
             {
                 "Recipe Name",
-                "Weld Pressure",
-                "Amplitude",
-                "Energy",
-                "Preheight+",
-                "Preheight-",
-                "Weld Time+",
-                "Weld Time-",
-                "Weld Power+",
-                "Weld Power-",
-                "Post Height+",
-                "Post Height-",
-                "Trigger Pressure",
+                "Weld Pressure(mBar)",
+                "Amplitude(μm)",
+                "Energy(J)",
+                "Preheight+(μm)",
+                "Preheight-(μm)",
+                "Weld Time+(ms)",
+                "Weld Time-(ms)",
+                "Weld Power+(W)",
+                "Weld Power-(W)",
+                "Post Height+(μm)",
+                "Post Height-(μm)",
+                "Trigger Pressure(mBar)",
             };
             //因为最初定义了两列，所以给两列按定义的格式赋值，此处第一列为时间，第二列为秒的字符串格式
             for(int i = 0;i<13;i++)
@@ -1118,6 +1116,12 @@ namespace ModbusToMQTT
                 drA[i][3] = "NA";
                 gDtLogInfoA.Rows.Add(drA[i]);
             }
+        }
+
+        public void UpdateRecipeTable()
+        {
+
+
         }
     }
 }
