@@ -1125,6 +1125,21 @@ namespace ModbusToMQTT
                     return DateTime.MinValue;
                 }
             }
+
+            public struct ProcessData
+            {
+                public string ProductName;                 // 加工产品名
+                public string ProductNumber;                // 加工产品序号
+                public string RecipeName;                   // 配方名称
+                public decimal WeldingTime;                  // 焊接时间(ms)
+                public decimal WeldingdelayTime;             // 焊接延迟时间(ms)
+                public decimal SecondaryUltrasonicDelay;     // 二次超时持续时间(ms)
+                public decimal HoldingTime;                  // 保压时间(ms)
+                public decimal Amplitude;                    // 振幅(%)
+                public decimal Energy;                        // 能量(ws)
+                public decimal Pressure;                      // 压力(bar)
+                public decimal SumOfWireDiameter;             // 线径和(mm2)
+            }
         }
     }
 }

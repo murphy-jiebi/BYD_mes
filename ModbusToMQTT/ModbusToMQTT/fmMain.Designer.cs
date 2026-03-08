@@ -34,10 +34,12 @@ namespace ModbusToMQTT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmMain));
             this.tabMain = new DMSkin.Metro.Controls.MetroTabControl();
             this.tapLogShow = new DMSkin.Metro.Controls.MetroTabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.grdDataLogA = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grdHisLog = new System.Windows.Forms.DataGridView();
-            this.picLogShowLogoWF = new System.Windows.Forms.PictureBox();
             this.tapStatusShow1 = new DMSkin.Metro.Controls.MetroTabPage();
             this.pnlCommSettings = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -93,13 +95,22 @@ namespace ModbusToMQTT
             this.tmrMQTT = new System.Windows.Forms.Timer(this.components);
             this.tmrDateTime = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabMain.SuspendLayout();
             this.tapLogShow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDataLogA)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdHisLog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogShowLogoWF)).BeginInit();
             this.tapStatusShow1.SuspendLayout();
             this.pnlCommSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -111,7 +122,6 @@ namespace ModbusToMQTT
             this.pnlLogShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSettingLogoWF)).BeginInit();
             this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabMain
@@ -130,13 +140,13 @@ namespace ModbusToMQTT
             // 
             this.tapLogShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(248)))), ((int)(((byte)(250)))));
             this.tapLogShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tapLogShow.Controls.Add(this.label22);
             this.tapLogShow.Controls.Add(this.label11);
-            this.tapLogShow.Controls.Add(this.dataGridView1);
+            this.tapLogShow.Controls.Add(this.grdDataLogA);
             this.tapLogShow.Controls.Add(this.groupBox3);
             this.tapLogShow.Controls.Add(this.label2);
             this.tapLogShow.Controls.Add(this.label1);
             this.tapLogShow.Controls.Add(this.grdHisLog);
-            this.tapLogShow.Controls.Add(this.picLogShowLogoWF);
             this.tapLogShow.DM_UseCustomBackColor = true;
             this.tapLogShow.DM_UseCustomForeColor = true;
             this.tapLogShow.DM_UseStyleColors = true;
@@ -152,6 +162,47 @@ namespace ModbusToMQTT
             this.tapLogShow.VerticalScrollbarBarColor = true;
             this.tapLogShow.VerticalScrollbarDM_HighlightOnWheel = false;
             this.tapLogShow.VerticalScrollbarSize = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label11.Location = new System.Drawing.Point(35, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 20);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "历史记录";
+            // 
+            // grdDataLogA
+            // 
+            this.grdDataLogA.AllowUserToOrderColumns = true;
+            this.grdDataLogA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdDataLogA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDataLogA.Location = new System.Drawing.Point(38, 431);
+            this.grdDataLogA.Name = "grdDataLogA";
+            this.grdDataLogA.RowTemplate.Height = 23;
+            this.grdDataLogA.Size = new System.Drawing.Size(1203, 176);
+            this.grdDataLogA.TabIndex = 62;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.groupBox3.Location = new System.Drawing.Point(38, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1203, 116);
+            this.groupBox3.TabIndex = 61;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "任务报告";
             // 
             // label2
             // 
@@ -190,17 +241,6 @@ namespace ModbusToMQTT
             this.grdHisLog.RowTemplate.Height = 23;
             this.grdHisLog.Size = new System.Drawing.Size(1203, 241);
             this.grdHisLog.TabIndex = 59;
-            // 
-            // picLogShowLogoWF
-            // 
-            this.picLogShowLogoWF.BackColor = System.Drawing.Color.Transparent;
-            this.picLogShowLogoWF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picLogShowLogoWF.Location = new System.Drawing.Point(648, 499);
-            this.picLogShowLogoWF.Name = "picLogShowLogoWF";
-            this.picLogShowLogoWF.Size = new System.Drawing.Size(24, 20);
-            this.picLogShowLogoWF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picLogShowLogoWF.TabIndex = 58;
-            this.picLogShowLogoWF.TabStop = false;
             // 
             // tapStatusShow1
             // 
@@ -448,6 +488,7 @@ namespace ModbusToMQTT
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modbus写入";
+            this.groupBox2.Visible = false;
             // 
             // textBox3
             // 
@@ -572,6 +613,7 @@ namespace ModbusToMQTT
             this.grpModbusTCPInfo.TabIndex = 72;
             this.grpModbusTCPInfo.TabStop = false;
             this.grpModbusTCPInfo.Text = "Modbus读取";
+            this.grpModbusTCPInfo.Visible = false;
             // 
             // txtModbusReadCount
             // 
@@ -664,14 +706,14 @@ namespace ModbusToMQTT
             this.pnlLogShow.Controls.Add(this.btnClearLog);
             this.pnlLogShow.Location = new System.Drawing.Point(13, 17);
             this.pnlLogShow.Name = "pnlLogShow";
-            this.pnlLogShow.Size = new System.Drawing.Size(960, 470);
+            this.pnlLogShow.Size = new System.Drawing.Size(1240, 623);
             this.pnlLogShow.TabIndex = 61;
             // 
             // pnlList
             // 
             this.pnlList.Location = new System.Drawing.Point(11, 8);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(941, 417);
+            this.pnlList.Size = new System.Drawing.Size(1216, 547);
             this.pnlList.TabIndex = 12;
             // 
             // btnClearLog
@@ -681,7 +723,7 @@ namespace ModbusToMQTT
             this.btnClearLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLog.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnClearLog.ForeColor = System.Drawing.Color.White;
-            this.btnClearLog.Location = new System.Drawing.Point(11, 431);
+            this.btnClearLog.Location = new System.Drawing.Point(11, 561);
             this.btnClearLog.Name = "btnClearLog";
             this.btnClearLog.Size = new System.Drawing.Size(272, 31);
             this.btnClearLog.TabIndex = 10;
@@ -709,7 +751,7 @@ namespace ModbusToMQTT
             this.lblLogShowCopyRightText.Name = "lblLogShowCopyRightText";
             this.lblLogShowCopyRightText.Size = new System.Drawing.Size(214, 20);
             this.lblLogShowCopyRightText.TabIndex = 57;
-            this.lblLogShowCopyRightText.Text = "CopyRight©XXXXXXXXXXXX INC.";
+            this.lblLogShowCopyRightText.Text = "CopyRight©Branson Ultrsonic.,Ltd";
             this.lblLogShowCopyRightText.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblVersion
@@ -719,7 +761,7 @@ namespace ModbusToMQTT
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(157, 20);
             this.lblVersion.TabIndex = 117;
-            this.lblVersion.Text = "版本号：V1.0.00";
+            this.lblVersion.Text = "版本号：V1.0.0.0";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // pnlTop
@@ -740,11 +782,11 @@ namespace ModbusToMQTT
             this.lblMainTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblMainTitle.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblMainTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
-            this.lblMainTitle.Location = new System.Drawing.Point(369, 13);
+            this.lblMainTitle.Location = new System.Drawing.Point(400, 13);
             this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(515, 48);
+            this.lblMainTitle.Size = new System.Drawing.Size(484, 48);
             this.lblMainTitle.TabIndex = 8;
-            this.lblMainTitle.Text = "XXXXXX软件";
+            this.lblMainTitle.Text = "Modbus-MQTT Gateway";
             this.lblMainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTime
@@ -786,34 +828,111 @@ namespace ModbusToMQTT
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox3
+            // label12
             // 
-            this.groupBox3.Location = new System.Drawing.Point(38, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1203, 87);
-            this.groupBox3.TabIndex = 61;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(49, 35);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 16);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "JobKey";
             // 
-            // dataGridView1
+            // label14
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 410);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1215, 197);
-            this.dataGridView1.TabIndex = 62;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(208, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(79, 16);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "JobState";
+            this.label14.UseWaitCursor = true;
             // 
-            // label11
+            // label15
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.5F);
-            this.label11.Location = new System.Drawing.Point(35, 122);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 20);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "历史记录";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(208, 71);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 20);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Running";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(442, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(75, 16);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "良品根数";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(634, 35);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(143, 16);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "追加任务良品根数";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(850, 35);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(75, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "不良计数";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(453, 71);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(33, 20);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "122";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(678, 71);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(17, 20);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "0";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(861, 71);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(25, 20);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "10";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(51, 71);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "1234567";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(36, 401);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(214, 22);
+            this.label22.TabIndex = 64;
+            this.label22.Text = "Recipe MQTT VS Mudbus";
             // 
             // fmMain
             // 
@@ -826,14 +945,15 @@ namespace ModbusToMQTT
             this.MaximizeBox = false;
             this.Name = "fmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fmMain_FormClosed);
             this.Load += new System.EventHandler(this.fmMain_Load);
             this.tabMain.ResumeLayout(false);
             this.tapLogShow.ResumeLayout(false);
             this.tapLogShow.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDataLogA)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdHisLog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogShowLogoWF)).EndInit();
             this.tapStatusShow1.ResumeLayout(false);
             this.pnlCommSettings.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -849,7 +969,6 @@ namespace ModbusToMQTT
             this.pnlLogShow.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSettingLogoWF)).EndInit();
             this.pnlTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -858,7 +977,6 @@ namespace ModbusToMQTT
 
         private DMSkin.Metro.Controls.MetroTabControl tabMain;
         private DMSkin.Metro.Controls.MetroTabPage tapLogShow;
-        private System.Windows.Forms.PictureBox picLogShowLogoWF;
         private System.Windows.Forms.Label lblLogShowCopyRightText;
         private DMSkin.Metro.Controls.MetroTabPage tapStatusShow1;
         private System.Windows.Forms.Panel pnlCommSettings;
@@ -919,7 +1037,18 @@ namespace ModbusToMQTT
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdDataLogA;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label22;
     }
 }
 

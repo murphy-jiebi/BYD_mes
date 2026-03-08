@@ -10,14 +10,14 @@ namespace ModbusToMQTT
 {
     class MesMsg
     {
-        JObject jsonObject = new JObject
-        {
-            { "id", 0},
-            { "timestamp", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") },
-            { "data", new JObject()},
-        };
+        //JObject jsonObject = new JObject
+        //{
+        //    { "id", 0},
+        //    { "timestamp", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") },
+        //    { "data", new JObject()},
+        //};
 
-        string PackMsgJobReport(string jobKey, string jobState, int[] cnt)
+        public string PackMsgJobReport(string jobKey, string jobState, int[] cnt)
         {
             if (cnt == null || cnt.Length < 3)
             {
@@ -39,6 +39,89 @@ namespace ModbusToMQTT
             return JsonConvert.SerializeObject(report);
         }
 
+        public string PackMsgUnitQuality(int Number, string Result)
+        {
+            var reprot = new
+            {
+                Number,
+                Result
+            };
 
+            return JsonConvert.SerializeObject(reprot);
+        }
+
+        public string PackMsgAlarm(string type, string msg)
+        {
+            var report = new
+            {
+                AlarmType = type,
+                AlarmMessage = msg
+            };
+
+            return JsonConvert.SerializeObject(report);
+        }
+
+        public string PackMsgCfg(Decimal[] cfg)
+        {
+            if(cfg.Length < 7)
+            {
+                return null;
+            }
+
+            var report = new
+            {
+                Amplitude = cfg[0],
+                Energy = cfg[1],
+                Pressure = cfg[2],
+                Height = cfg[3],
+                SumOfWireDiameter = cfg[4],
+                WireDiameter = cfg[5],
+                WeldingTime = cfg[6],
+            };
+
+            return JsonConvert.SerializeObject(report);
+        }
+
+        public string PackMsgHeartbeat(string state)
+        {
+            var report = new
+            {
+                DeviceState = state,
+            };
+
+            return JsonConvert.SerializeObject(report); 
+        }
+
+        public int ParseMsgRequestArticle(string msg)
+        {
+
+            return 0;
+        }
+
+        public int ParseMsgRequestJob(string msg)
+        {
+
+            return 0; 
+        }
+
+        public string PackMsgFeedbackSpecArticle()
+        {
+            var report = new
+            {
+                StatusCode = "OK",
+                ReasonPhrase = "OK",
+            };
+            return JsonConvert.SerializeObject(report);
+        }
+
+        public string PackMsgFeedbackProductionJob()
+        {
+            var report = new
+            {
+                StatusCode = "OK",
+                ReasonPhrase = "OK",
+            };
+            return JsonConvert.SerializeObject(report);
+        }
     }
 }

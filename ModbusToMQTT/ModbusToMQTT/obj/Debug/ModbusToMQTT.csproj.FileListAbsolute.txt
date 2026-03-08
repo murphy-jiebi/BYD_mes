@@ -20,3 +20,14 @@ C:\Users\murphy\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.csproj.
 C:\Users\murphy\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusTo.E18F6703.Up2Date
 C:\Users\murphy\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.exe
 C:\Users\murphy\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.pdb
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.csproj.AssemblyReference.cache
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.fmMain.resources
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.Properties.Resources.resources
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.csproj.GenerateResource.cache
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.csproj.CoreCompileInputs.cache
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.exe
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusToMQTT.pdb
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\bin\Debug\ModbusToMQTT.exe.config
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\bin\Debug\ModbusToMQTT.exe
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\bin\Debug\ModbusToMQTT.pdb
+E:\Desktop\ModbusToMQTT\ModbusToMQTT\obj\Debug\ModbusTo.E18F6703.Up2Date

@@ -13,11 +13,13 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WF.Common;
+using static ModbusToMQTT.MesMsg;
 using static ModbusToMQTT.ModbusTCPClass;
 
 namespace ModbusToMQTT
@@ -42,8 +44,8 @@ namespace ModbusToMQTT
 
                 #region 从配置文件中读取参数
 
-                lblMainTitle.Text = gIni.ReadString("Params", "MainTitleText", "");
-                this.Text = gIni.ReadString("Params", "MainTitleText", "");
+                //lblMainTitle.Text = gIni.ReadString("Params", "MainTitleText", "");
+                //this.Text = gIni.ReadString("Params", "MainTitleText", "");
 
                 txtMQTTSvrIP.Text = gIni.ReadString("MQTTParams", "MqttServerIP", "");
                 gMQTTSvrIP = gIni.ReadString("MQTTParams", "MqttServerIP", "");
@@ -106,14 +108,50 @@ namespace ModbusToMQTT
                 #endregion
 
                 //根据需要制定日志列数，此处示例为两列
-
-                gDtLogInfo.Columns.Add("时间");
-                gDtLogInfo.Columns[0].DataType = Type.GetType("System.DateTime");
-                gDtLogInfo.Columns.Add("日志信息");
+                gDtLogInfo.Columns.Add("Cycle Counter");
+                gDtLogInfo.Columns[0].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Energy");
                 gDtLogInfo.Columns[1].DataType = Type.GetType("System.String");
-
+                gDtLogInfo.Columns.Add("Trigger Pressure");
+                gDtLogInfo.Columns[2].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Weld Pressure");
+                gDtLogInfo.Columns[3].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Amplitude");
+                gDtLogInfo.Columns[4].DataType = Type.GetType("System.Int32");
+                gDtLogInfo.Columns.Add("Weld Time");
+                gDtLogInfo.Columns[5].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Peak Power");
+                gDtLogInfo.Columns[6].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Preheight");
+                gDtLogInfo.Columns[7].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Post Height");
+                gDtLogInfo.Columns[8].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Error");
+                gDtLogInfo.Columns[9].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Result");
+                gDtLogInfo.Columns[10].DataType = Type.GetType("System.String");
+                gDtLogInfo.Columns.Add("Repeat Cycle");
+                gDtLogInfo.Columns[11].DataType = Type.GetType("System.String");
                 //将数据源绑定，这样更新gDtLogInfo即可
                 grdHisLog.DataSource = gDtLogInfo;
+
+                //根据需要制定日志列数，此处示例为两列
+
+                gDtLogInfoA.Columns.Add("Index");
+                gDtLogInfoA.Columns[0].DataType = Type.GetType("System.Int32");
+                gDtLogInfoA.Columns.Add("Item Description"); 
+                gDtLogInfoA.Columns[1].DataType = Type.GetType("System.String");
+                gDtLogInfoA.Columns.Add("From MQTT");
+                gDtLogInfoA.Columns[2].DataType = Type.GetType("System.String");
+                gDtLogInfoA.Columns.Add("From Modbus");
+                gDtLogInfoA.Columns[3].DataType = Type.GetType("System.String");
+
+
+                //将数据源绑定，这样更新gDtLogInfo即可
+                grdDataLogA.DataSource = gDtLogInfoA;
+
+                InitRecipeTable();
+
             }
             catch (Exception ex)
             {
@@ -123,6 +161,10 @@ namespace ModbusToMQTT
 
         #region 全局变量
 
+        int[] jobCnt = new int[3]; // 0:良品数； 1：追加任务良品数； 2：不良数；
+        int weldCnt = 0;            //焊接计数
+        string jobKeyStr = string.Empty;
+        int jobState = 0;
 
         ModbusTCPClass.WeldData weldData;
 
@@ -146,6 +188,15 @@ namespace ModbusToMQTT
             "设备待机中",
             "设备调试中",
             "其它",
+        };
+
+        string[] jobStateStr =
+        {
+            "InWork",
+            "Pending",
+            "Suspended",
+            "Rejected",
+            "Done",
         };
 
         int deviceState = 0;
@@ -219,6 +270,11 @@ namespace ModbusToMQTT
 
         DataTable gDtLogInfo = new DataTable();                                                               //首页History Log 表格绑定的数据表
 
+        DataTable gDtLogInfoA = new DataTable();                                                               //首页History Log 表格绑定的数据表
+
+        DataTable gDtLogInfoB = new DataTable();                                                               //首页History Log 表格绑定的数据表
+
+        DataRow[] drA = new DataRow[13];
         #endregion
         private void fmMain_Load(object sender, EventArgs e)
         {
@@ -255,6 +311,8 @@ namespace ModbusToMQTT
                 ThrdStateMachine.Start();
 
                 label2.Text = deviceStateCnStr[deviceState];
+
+                
             }
             catch (Exception ex)
             {
@@ -361,11 +419,13 @@ namespace ModbusToMQTT
                 DataRow dr = gDtLogInfo.NewRow();
 
                 //因为最初定义了两列，所以给两列按定义的格式赋值，此处第一列为时间，第二列为秒的字符串格式
-                dr[0] = DateTime.Now;
-                dr[1] = DateTime.Now.Second.ToString();
+                dr[0] = DateTime.Now.Second;
+                dr[1] = DateTime.Now.Hour.ToString();
+                dr[2] = DateTime.Now.Minute.ToString();
+                dr[3] = DateTime.Now.Second.ToString();
 
                 //然后将这个数据行加入到这个DataTable中
-                gDtLogInfo.Rows.Add(dr);
+                gDtLogInfo.Rows.InsertAt(dr,0);
 
                 if (gDtLogInfo.Rows.Count > 1000)
                 {
@@ -379,6 +439,16 @@ namespace ModbusToMQTT
 
                 //保证表格一直显示在最新一行
                 grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
+
+                #endregion
+
+                #region 首页日志表格的示例 -A
+
+                // 声明一个数据行，是这个DataTable中的行格式
+                
+
+                //保证表格一直显示在最新一行
+                //grdDataLogA.FirstDisplayedScrollingRowIndex = gDtLogInfoA.Rows.Count;
 
                 #endregion
 
@@ -408,7 +478,10 @@ namespace ModbusToMQTT
 
         private void tmrMQTT_Tick(object sender, EventArgs e)
         {
-            KeyValuePair<string, string> mqttMsg = new KeyValuePair<string, string>(MQTTTopic.Heartbeat, deviceStateStr[deviceState]);
+            
+            string val = mesMsg.PackMsgHeartbeat(deviceStateStr[deviceState]);
+
+            KeyValuePair<string, string> mqttMsg = new KeyValuePair<string, string>(MQTTTopic.Heartbeat, val);
 
             mqttMsgQueue.Enqueue(mqttMsg);
             //try
@@ -549,18 +622,32 @@ namespace ModbusToMQTT
         /// <returns></returns>
         private Task _mqttClient_ApplicationMessageReceivedAsync(MqttApplicationMessageReceivedEventArgs arg)
         {
+            string val = string.Empty;
             try
             {
                 //Console.WriteLine($"ApplicationMessageReceivedAsync：客户端ID=【{arg.ClientId}】接收到消息。 Topic主题=【{arg.ApplicationMessage.Topic}】 消息=【{Encoding.UTF8.GetString(arg.ApplicationMessage.Payload)}】 qos等级=【{arg.ApplicationMessage.QualityOfServiceLevel}】");
 
                 AddMsg(string.Format("" + DateTime.Now.ToString() + " > [MQTT -> 接收订阅数据：{0}] -> 客户端ID:{1} 数据长度:{2}", arg.ApplicationMessage.Topic, arg.ClientId, arg.ApplicationMessage.Payload.Length));
 
-                //switch (arg.ApplicationMessage.Topic)
-                //{
+                switch (arg.ApplicationMessage.Topic)
+                {
+                    case MQTTTopic.RequestArticles:
+                        mesMsg.ParseMsgRequestArticle(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
+                        val = mesMsg.PackMsgFeedbackSpecArticle();
+                        KeyValuePair<string, string> pair1 = new KeyValuePair<string, string>(MQTTTopic.FeedbackArticles, val);
+                        mqttMsgQueue.Enqueue(pair1);
+                        break;
+                    case  MQTTTopic.RequestJobs:
+                        mesMsg.ParseMsgRequestJob(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
+                        val = mesMsg.PackMsgFeedbackSpecArticle();
+                        KeyValuePair<string, string> pair2 = new KeyValuePair<string, string>(MQTTTopic.FeedbackJobs, val);
+                        mqttMsgQueue.Enqueue(pair2);
+                        break;
+                    default:
 
-
-                //}
-
+                        break;
+                }
+                
                 return Task.CompletedTask;
             }
             catch (Exception ex)
@@ -944,9 +1031,54 @@ namespace ModbusToMQTT
 
         void StateMachine()
         {
+            
             while (true)
             {
-                
+                if(weldData.Counter != weldCnt)
+                {
+                    weldCnt = weldData.Counter;
+                   
+
+                    if (weldData.WeldErrorCode != 0)
+                    {
+                        jobCnt[2]++;
+
+
+                    }
+                    else
+                    {
+                        jobCnt[0]++;
+                    }
+
+                    string val = mesMsg.PackMsgJobReport(jobKeyStr, jobStateStr[jobState], jobCnt);
+                    KeyValuePair<string, string> msg = new KeyValuePair<string, string>(MQTTTopic.JobReport, val);
+                    mqttMsgQueue.Enqueue(msg);
+
+
+
+                    DataRow dr = gDtLogInfo.NewRow();
+
+                    dr[0] = weldData.Counter;
+                    dr[1] = weldData.Barcode1;
+                    dr[2] = weldData.WeldErrorCode;
+                    dr[3] = "OK";
+
+                    gDtLogInfo.Rows.Add(dr);
+
+                    if (gDtLogInfo.Rows.Count > 1000)
+                    {
+                        //保持最新的1000行
+                        gDtLogInfo.Rows.RemoveAt(0);
+                    }
+                    else
+                    {
+
+                    }
+
+                    //保证表格一直显示在最新一行
+                    grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
+
+                }
 
                 Thread.Sleep(100);
             }
@@ -955,6 +1087,37 @@ namespace ModbusToMQTT
         private void timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = deviceStateCnStr[deviceState];
+        }
+
+        public void InitRecipeTable()
+        {
+
+            string[] str =
+            {
+                "Recipe Name",
+                "Weld Pressure",
+                "Amplitude",
+                "Energy",
+                "Preheight+",
+                "Preheight-",
+                "Weld Time+",
+                "Weld Time-",
+                "Weld Power+",
+                "Weld Power-",
+                "Post Height+",
+                "Post Height-",
+                "Trigger Pressure",
+            };
+            //因为最初定义了两列，所以给两列按定义的格式赋值，此处第一列为时间，第二列为秒的字符串格式
+            for(int i = 0;i<13;i++)
+            {
+                drA[i] = gDtLogInfoA.NewRow();
+                drA[i][0] = i + 1;
+                drA[i][1] = str[i];
+                drA[i][2] = "NA";
+                drA[i][3] = "NA";
+                gDtLogInfoA.Rows.Add(drA[i]);
+            }
         }
     }
 }
