@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using static ModbusToMQTT.ModbusTCPClass;
+using static ModbusToMQTT.ModbusTCPClass.WeldData;
 
 namespace ModbusToMQTT
 {
@@ -92,35 +94,28 @@ namespace ModbusToMQTT
             return JsonConvert.SerializeObject(report); 
         }
 
-        public int ParseMsgRequestArticle(string msg)
+        // 详细伪代码：
+        // 1. 如果输入 msg 为空或空白，返回错误码 -1。
+        // 2. 尝试用 JObject.Parse 直接解析 msg。
+        //    a. 解析成功 -> 继续。
+        //    b. 解析失败（可能因为使用单引号或未转义的引号） -> 将单引号替换为双引号后再次解析。
+        // 3. 从 JObject 中安全读取各字段，使用 jo.Value<T?> 提供默认值（如果字段缺失则使用 0 或 null）。
+        // 4. （可选）将解析到的值赋给类字段或配置处，这里保留 TODO 注释供后续使用。
+        // 5. 解析成功返回 0，出错返回 -1。
+        // 备注：避免在方法中保留未使用的硬编码 JSON 字符串，修复原先导致的字符串字面量语法错误。
+
+        public ModbusTCPClass.ArticleData ParseMsgRequestArticle(string msg)
         {
+            ModbusTCPClass.ArticleData articleData = JsonConvert.DeserializeObject<ModbusTCPClass.ArticleData>(msg);
 
-            string json = @"{
-                'ProductName': '1223',
-"ProductNumber": "P12345",
-"RecipeName": "标准配方",
-"SettingWeldPressure": 500,
-"SettingAmplitude": 80,
-"SettingEnergy": 1000,
-"WeldRepeatTime": 3,
-"SettingPreheightHighLimit": 2000,
-"SettingPreheightLowLimit": 1500,
-"SettingTimeHighLimit": 500,
-"SettingTimeLowLimit": 300,
-"SettingPowerHighLimit": 2000,
-"SettingPowerLowLimit": 1500,
-"SettingPostHeightHighLimit": 1800,
-"SettingPostHeightLowLimit": 1200,
-"SettingTriggerPresssure": 100
-}";
-
-            return 0;
+            return articleData;
         }
 
-        public int ParseMsgRequestJob(string msg)
+        public ModbusTCPClass.JobData ParseMsgRequestJob(string msg)
         {
+            ModbusTCPClass.JobData jobData =JsonConvert.DeserializeObject<ModbusTCPClass.JobData>(msg);
 
-            return 0; 
+            return jobData; 
         }
 
         public string PackMsgFeedbackSpecArticle()

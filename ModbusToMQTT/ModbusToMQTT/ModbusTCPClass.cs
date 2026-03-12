@@ -1124,34 +1124,38 @@ namespace ModbusToMQTT
                     // 无效日期返回最小值
                     return DateTime.MinValue;
                 }
-            }
-
-            public struct ArticleData
-            {
-                public string ProductName;                 // 加工产品名
-                public string ProductNumber;                // 加工产品序号
-                public string RecipeName;                   // 配方名称
-                public decimal WeldingTime;                  // 焊接时间(ms)
-                public decimal WeldingdelayTime;             // 焊接延迟时间(ms)
-                public decimal SecondaryUltrasonicDelay;     // 二次超时持续时间(ms)
-                public decimal HoldingTime;                  // 保压时间(ms)
-                public decimal Amplitude;                    // 振幅(%)
-                public decimal Energy;                        // 能量(ws)
-                public decimal Pressure;                      // 压力(bar)
-                public decimal SumOfWireDiameter;             // 线径和(mm2)
-            }
-
-            public struct JobData
-            {
-                public string Key;                            // 作业唯一标识符
-                public string JobRequestState;
-                public string ArticleKey;
-                public int Pieces;
-                public int BatchSize;
-                public int AdditionalPieces;
-                public string JobInformation;
-            }
-
+            } 
         }
+        public struct ArticleData
+        {
+            public string ProductName;                 // 加工产品名
+            public string ProductNumber;                // 加工产品序号
+            public string RecipeName;                   // 配方名称
+            public int SettingWeldPressure;                  // 焊接压力设定 (mBar)
+            public ushort SettingAmplitude;                  // 焊接振幅设定 (um)
+            public int SettingEnergy;                        // 焊接能量设定 (0.1J)
+            public ushort WeldRepeatTime;                    // 焊接重复次数
+            public ushort Reseve;                            // 备用
+            public ushort SettingPreheightHighLimit;         // 焊前高度上限设定 (um)
+            public ushort SettingPreheightLowLimit;          // 焊前高度下限设定 (um)
+            public ushort SettingTimeHighLimit;              // 焊接时间上限设定 (ms)
+            public ushort SettingTimeLowLimit;                // 焊接时间下限设定 (ms)
+            public ushort SettingPowerHighLimit;              // 焊接功率上限设定 (W)
+            public ushort SettingPowerLowLimit;                // 焊接功率下限设定 (W)
+            public ushort SettingPostHeightHighLimit;         // 焊后高度上限设定 (um)
+            public ushort SettingPostHeightLowLimit;          // 焊后高度下限设定 (um)
+            public int SettingTriggerPresssure;                // 触发压力设定 (mBar)
+        }
+
+        public struct JobData
+        {
+            string Key;                 // 作业唯一标示符 (必需)
+            string JobRequestState;     // 期望的任务状态 (必需)
+            string ArticleKey;          // 工艺主题Key
+            int Pieces;                // 所需数
+            int BatchSize;               // 最小批次
+            int AdditionalPieces;        // 追加的数量
+            string JobInformation;       // MES自定义任务附加任务信息
+        };
     }
 }

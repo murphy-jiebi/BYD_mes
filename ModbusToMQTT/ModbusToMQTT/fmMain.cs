@@ -21,6 +21,7 @@ using System.Windows.Forms;
 using WF.Common;
 using static ModbusToMQTT.MesMsg;
 using static ModbusToMQTT.ModbusTCPClass;
+using static ModbusToMQTT.ModbusTCPClass.WeldData;
 
 namespace ModbusToMQTT
 {
@@ -167,6 +168,9 @@ namespace ModbusToMQTT
         int jobState = 0;
 
         ModbusTCPClass.WeldData weldData;
+        ModbusTCPClass.JobData jobData;
+        ModbusTCPClass.ArticleData articleData;
+
 
         string[] deviceStateStr =
         {
@@ -483,25 +487,6 @@ namespace ModbusToMQTT
             KeyValuePair<string, string> mqttMsg = new KeyValuePair<string, string>(MQTTTopic.Heartbeat, val);
 
             mqttMsgQueue.Enqueue(mqttMsg);
-            //try
-            //{
-            //    if (!mqttClient.IsConnected)
-            //    {
-            //        AddMsg(string.Format("" + DateTime.Now.ToString() + " > [MQTT -> 客户端已与服务端断开，尝试重连！]"));
-            //        mqttClient.ConnectAsync(mqttClientOptions);
-            //    }
-            //    else
-            //    {
-            //        //Publish(gMQTTPubTopic, JsonConvert.SerializeObject(gPublishJsonData));
-            //        AddMsg(string.Format("" + DateTime.Now.ToString() + " > [MQTT -> 发布数据] -> 发布主题:{0} 数据长度:{1}", gMQTTPubTopic, JsonConvert.SerializeObject(gPublishJsonData).Length));
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    WriteSysLog("实时数据发布Timer异常：" + ex.ToString().Trim());
-
-            //}
         }
 
         #endregion
@@ -663,7 +648,6 @@ namespace ModbusToMQTT
         /// <param name="data">要发布的数据</param>
         public void Publish(string topic, string data)
         {
-
 
             var message = new MqttApplicationMessage
             {
@@ -1058,9 +1042,15 @@ namespace ModbusToMQTT
                     DataRow dr = gDtLogInfo.NewRow();
 
                     dr[0] = weldData.Counter;
-                    dr[1] = weldData.Barcode1;
-                    dr[2] = weldData.WeldErrorCode;
-                    dr[3] = "OK";
+                    dr[1] = weldData.ActualEnergy;
+                    dr[2] = weldData.ActualTriggerPresssure;
+                    dr[3] = weldData.ActualWeldPressure;
+                    dr[4] = weldData.ActualAmplitude;
+                    dr[5] = weldData.ActualTime;
+                    dr[6] = weldData.ActualPeakPower;
+                    dr[7] = weldData.ActualPreHeight;
+                    dr[8] = weldData.ActualPostHeight;
+                    dr[9] = weldData.WeldErrorCode;
 
                     gDtLogInfo.Rows.Add(dr);
 
@@ -1086,6 +1076,34 @@ namespace ModbusToMQTT
         private void timer1_Tick(object sender, EventArgs e)
         {
             label2.Text = deviceStateCnStr[deviceState];
+
+            drA[0][3] = weldData.CurrentRecipeName;
+            drA[1][3] = weldData.SettingWeldPressure;
+            drA[2][3] = weldData.SettingAmplitude;
+            drA[3][3] = weldData.SettingEnergy;
+            drA[4][3] = weldData.SettingPreheightHighLimit;
+            drA[5][3] = weldData.SettingPreheightLowLimit;
+            drA[6][3] = weldData.SettingTimeHighLimit;
+            drA[7][3] = weldData.SettingTimeLowLimit;
+            drA[8][3] = weldData.SettingPowerHighLimit;
+            drA[9][3] = weldData.SettingPowerLowLimit;
+            drA[10][3] = weldData.SettingPostHeightHighLimit;
+            drA[11][3] = weldData.SettingPostHeightLowLimit;
+            drA[12][3] = weldData.SettingTriggerPresssure;
+
+            drA[0][2] = articleData.RecipeName;
+            drA[1][2] = articleData.SettingWeldPressure;
+            drA[2][2] = articleData.SettingAmplitude;
+            drA[3][2] = articleData.SettingEnergy;
+            drA[4][2] = articleData.SettingPreheightHighLimit;
+            drA[5][2] = articleData.SettingPreheightLowLimit;
+            drA[6][2] = articleData.SettingTimeHighLimit;
+            drA[7][2] = articleData.SettingTimeLowLimit;
+            drA[8][2] = articleData.SettingPowerHighLimit;
+            drA[9][2] = articleData.SettingPowerLowLimit;
+            drA[10][2] = articleData.SettingPostHeightHighLimit;
+            drA[11][2] = articleData.SettingPostHeightLowLimit;
+            drA[12][2] = articleData.SettingTriggerPresssure;
         }
 
         public void InitRecipeTable()
