@@ -1126,7 +1126,7 @@ namespace ModbusToMQTT
                 }
             }
 
-            public struct ProcessData
+            public struct ArticleData
             {
                 public string ProductName;                 // 加工产品名
                 public string ProductNumber;                // 加工产品序号
@@ -1140,6 +1140,18 @@ namespace ModbusToMQTT
                 public decimal Pressure;                      // 压力(bar)
                 public decimal SumOfWireDiameter;             // 线径和(mm2)
             }
+
+            public struct JobData
+            {
+                public string Key;                            // 作业唯一标识符
+                public string JobRequestState;
+                public string ArticleKey;
+                public int Pieces;
+                public int BatchSize;
+                public int AdditionalPieces;
+                public string JobInformation;
+            }
+
         }
     }
 }

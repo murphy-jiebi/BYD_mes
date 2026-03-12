@@ -95,25 +95,6 @@ namespace ModbusToMQTT
         public int ParseMsgRequestArticle(string msg)
         {
 
-            string json = @"{
-                'ProductName': '1223',
-"ProductNumber": "P12345",
-"RecipeName": "标准配方",
-"SettingWeldPressure": 500,
-"SettingAmplitude": 80,
-"SettingEnergy": 1000,
-"WeldRepeatTime": 3,
-"SettingPreheightHighLimit": 2000,
-"SettingPreheightLowLimit": 1500,
-"SettingTimeHighLimit": 500,
-"SettingTimeLowLimit": 300,
-"SettingPowerHighLimit": 2000,
-"SettingPowerLowLimit": 1500,
-"SettingPostHeightHighLimit": 1800,
-"SettingPostHeightLowLimit": 1200,
-"SettingTriggerPresssure": 100
-}";
-
             return 0;
         }
 
