@@ -1149,13 +1149,13 @@ namespace ModbusToMQTT
 
         public struct JobData
         {
-            string Key;                 // 作业唯一标示符 (必需)
-            string JobRequestState;     // 期望的任务状态 (必需)
-            string ArticleKey;          // 工艺主题Key
-            int Pieces;                // 所需数
-            int BatchSize;               // 最小批次
-            int AdditionalPieces;        // 追加的数量
-            string JobInformation;       // MES自定义任务附加任务信息
+            public string Key;                 // 作业唯一标示符 (必需)
+            public string JobRequestState;     // 期望的任务状态 (必需)
+            public string ArticleKey;          // 工艺主题Key
+            public int Pieces;                // 所需数
+            public int BatchSize;               // 最小批次
+            public int AdditionalPieces;        // 追加的数量
+            public string JobInformation;       // MES自定义任务附加任务信息
         };
     }
 }

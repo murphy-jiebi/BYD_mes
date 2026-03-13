@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\",
+  "WorkspaceRootPath": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|solutionrelative:fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|c:\\users\\murphy\\desktop\\modbustomqtt\\modbustomqtt\\fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|c:\\users\\e1548073\\desktop\\byd_mes\\modbustomqtt\\modbustomqtt\\fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|solutionrelative:fmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\modbustcpclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\modbustcpclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|solutionrelative:modbustcpclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\mesmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\mesmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA9339A4-EE5F-41AC-BF8E-FCA3DF55496F}|ModbusToMQTT.csproj|solutionrelative:mesmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -40,37 +40,35 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "MesMsg.cs",
-              "DocumentMoniker": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\MesMsg.cs",
+              "DocumentMoniker": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\MesMsg.cs",
               "RelativeDocumentMoniker": "MesMsg.cs",
-              "ToolTip": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\MesMsg.cs",
+              "ToolTip": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\MesMsg.cs",
               "RelativeToolTip": "MesMsg.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAqwFsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAgwHkAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T01:49:59.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T01:49:59.539Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ModbusTCPClass.cs",
-              "DocumentMoniker": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\ModbusTCPClass.cs",
+              "DocumentMoniker": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\ModbusTCPClass.cs",
               "RelativeDocumentMoniker": "ModbusTCPClass.cs",
-              "ToolTip": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\ModbusTCPClass.cs",
+              "ToolTip": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\ModbusTCPClass.cs",
               "RelativeToolTip": "ModbusTCPClass.cs",
-              "ViewState": "AgIAAGAEAAAAAAAAAAAUwGwEAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAHAEAAAAAAAAAAAgwH0EAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T01:46:32.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T01:46:32.421Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "fmMain.cs",
-              "DocumentMoniker": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
+              "DocumentMoniker": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
               "RelativeDocumentMoniker": "fmMain.cs",
-              "ToolTip": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
+              "ToolTip": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
               "RelativeToolTip": "fmMain.cs",
-              "ViewState": "AgIAAKYDAAAAAAAAAAAmwMcDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0EAAAAAAAAAAAiwEgEAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T11:59:46.688Z",
               "EditorCaption": ""
@@ -79,9 +77,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "fmMain.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
+              "DocumentMoniker": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs",
               "RelativeDocumentMoniker": "fmMain.cs",
-              "ToolTip": "C:\\Users\\murphy\\Desktop\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs [\u8BBE\u8BA1]",
+              "ToolTip": "C:\\Users\\E1548073\\Desktop\\BYD_mes\\ModbusToMQTT\\ModbusToMQTT\\fmMain.cs [\u8BBE\u8BA1]",
               "RelativeToolTip": "fmMain.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-08T15:01:15.95Z",

@@ -148,3 +148,213 @@
    在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    在 ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__52.MoveNext() 位置 C:\Users\murphy\Desktop\ModbusToMQTT\ModbusToMQTT\fmMain.cs:行号 550
+[NowTime->2026/3/13 14:16:44] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__52.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 551
+[NowTime->2026/3/13 14:18:19] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__52.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 551
+[NowTime->2026/3/13 14:58:00] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__52.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 551
+[NowTime->2026/3/13 15:25:30] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 15:26:34] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 15:58:34] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 15:59:44] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552

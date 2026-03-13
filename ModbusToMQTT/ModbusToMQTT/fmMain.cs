@@ -136,6 +136,7 @@ namespace ModbusToMQTT
                 //将数据源绑定，这样更新gDtLogInfo即可
                 grdHisLog.DataSource = gDtLogInfo;
 
+                grdHisLog.FirstDisplayedScrollingRowIndex = 0;
                 //根据需要制定日志列数，此处示例为两列
 
                 gDtLogInfoA.Columns.Add("Index");
@@ -164,6 +165,7 @@ namespace ModbusToMQTT
 
         int[] jobCnt = new int[3]; // 0:良品数； 1：追加任务良品数； 2：不良数；
         int weldCnt = 0;            //焊接计数
+        int repeatCycleCnt = 0;       //焊接总数
         string jobKeyStr = string.Empty;
         int jobState = 0;
 
@@ -442,7 +444,7 @@ namespace ModbusToMQTT
                 }
 
                 //保证表格一直显示在最新一行
-                grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
+                //grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
 
                 #endregion
 
@@ -616,14 +618,14 @@ namespace ModbusToMQTT
                 switch (arg.ApplicationMessage.Topic)
                 {
                     case MQTTTopic.RequestArticles:
-                        mesMsg.ParseMsgRequestArticle(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
+                        articleData =  mesMsg.ParseMsgRequestArticle(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
                         val = mesMsg.PackMsgFeedbackSpecArticle();
                         KeyValuePair<string, string> pair1 = new KeyValuePair<string, string>(MQTTTopic.FeedbackArticles, val);
                         mqttMsgQueue.Enqueue(pair1);
                         break;
                     case  MQTTTopic.RequestJobs:
-                        mesMsg.ParseMsgRequestJob(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
-                        val = mesMsg.PackMsgFeedbackSpecArticle();
+                        jobData = mesMsg.ParseMsgRequestJob(Encoding.UTF8.GetString(arg.ApplicationMessage.Payload));
+                        val = mesMsg.PackMsgFeedbackProductionJob();
                         KeyValuePair<string, string> pair2 = new KeyValuePair<string, string>(MQTTTopic.FeedbackJobs, val);
                         mqttMsgQueue.Enqueue(pair2);
                         break;
@@ -1020,24 +1022,12 @@ namespace ModbusToMQTT
                 if(weldData.Counter != weldCnt)
                 {
                     weldCnt = weldData.Counter;
-                   
 
-                    if (weldData.WeldErrorCode != 0)
-                    {
-                        jobCnt[2]++;
-
-
-                    }
-                    else
-                    {
-                        jobCnt[0]++;
-                    }
+                    repeatCycleCnt++;
 
                     string val = mesMsg.PackMsgJobReport(jobKeyStr, jobStateStr[jobState], jobCnt);
                     KeyValuePair<string, string> msg = new KeyValuePair<string, string>(MQTTTopic.JobReport, val);
                     mqttMsgQueue.Enqueue(msg);
-
-
 
                     DataRow dr = gDtLogInfo.NewRow();
 
@@ -1051,8 +1041,23 @@ namespace ModbusToMQTT
                     dr[7] = weldData.ActualPreHeight;
                     dr[8] = weldData.ActualPostHeight;
                     dr[9] = weldData.WeldErrorCode;
+                    dr[11] = repeatCycleCnt;
 
-                    gDtLogInfo.Rows.Add(dr);
+                    if (weldData.WeldErrorCode != 0)
+                    {
+                        jobCnt[2]++;
+                        dr[10] = "NG";
+                        string alarmStr = mesMsg.PackMsgAlarm("111","2222");
+                        KeyValuePair<string, string> alarmMsg = new KeyValuePair<string, string>(MQTTTopic.Alarm, alarmStr);
+                        mqttMsgQueue.Enqueue(alarmMsg);
+                    }
+                    else
+                    {
+                        jobCnt[0]++;
+                        dr[10] = "OK";
+                    }
+
+                    gDtLogInfo.Rows.InsertAt(dr, 0);
 
                     if (gDtLogInfo.Rows.Count > 1000)
                     {
@@ -1065,7 +1070,7 @@ namespace ModbusToMQTT
                     }
 
                     //保证表格一直显示在最新一行
-                    grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
+                    //grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
 
                 }
 
@@ -1104,6 +1109,25 @@ namespace ModbusToMQTT
             drA[10][2] = articleData.SettingPostHeightHighLimit;
             drA[11][2] = articleData.SettingPostHeightLowLimit;
             drA[12][2] = articleData.SettingTriggerPresssure;
+
+            for(int i = 0;i<13;i++)
+            {
+                if (drA[i][2].ToString() != drA[i][3].ToString())
+                {
+                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+
+            label13.Text = jobData.Key;
+            label15.Text = jobData.JobRequestState;
+
+            label19.Text = jobCnt[0].ToString();
+            label20.Text = jobCnt[1].ToString();
+            label21.Text = jobCnt[2].ToString();
         }
 
         public void InitRecipeTable()
@@ -1124,7 +1148,6 @@ namespace ModbusToMQTT
                 "Post Height-(μm)",
                 "Trigger Pressure(mBar)",
             };
-            //因为最初定义了两列，所以给两列按定义的格式赋值，此处第一列为时间，第二列为秒的字符串格式
             for(int i = 0;i<13;i++)
             {
                 drA[i] = gDtLogInfoA.NewRow();
