@@ -358,3 +358,2015 @@
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
    at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:33:32] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:34:48] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:51] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:51] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:52] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:53] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:54] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:55] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:56] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:57] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:58] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:34:59] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:00] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:01] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:02] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:03] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:05] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:06] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:07] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:08] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:09] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:10] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:11] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:12] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:13] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:14] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:15] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:35:16] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:06] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:07] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:09] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:09] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:38:10] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:11] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:12] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:13] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:14] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:15] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:16] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:17] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:18] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:19] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:20] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:21] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:22] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:23] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:24] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:38:25] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:23] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:24] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:25] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:25] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:39:26] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:27] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:28] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:29] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:30] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:31] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:32] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:33] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:34] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:35] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:36] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:39:37] Log:Modbus客户端数据解析异常：System.InvalidOperationException: Cross-thread operation not valid: Control 'textBox8' accessed from a thread other than the thread it was created on.
+   at System.Windows.Forms.Control.get_Handle()
+   at System.Windows.Forms.Control.set_WindowText(String value)
+   at System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   at System.Windows.Forms.Control.set_Text(String value)
+   at System.Windows.Forms.TextBoxBase.set_Text(String value)
+   at System.Windows.Forms.TextBox.set_Text(String value)
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:42:08] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:09] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:10] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:10] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:42:11] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:12] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:13] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:14] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:15] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:16] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:17] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:18] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:19] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:20] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:21] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:22] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:42:23] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 789
+[NowTime->2026/3/13 22:44:30] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:31] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:32] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:33] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:44:33] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:34] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:35] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:44:36] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 766
+[NowTime->2026/3/13 22:45:33] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 22:45:35] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:47:18] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 22:47:19] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:48:39] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 22:48:41] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:50:30] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:50:30] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:36] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:51:37] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:40] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:51:40] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:53] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:51:53] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:56] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:51:56] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:57] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:51:57] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:51:57] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 552
+[NowTime->2026/3/13 22:52:10] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:52:10] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:52:12] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:52:13] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:52:13] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:52:14] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:52:14] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1082
+[NowTime->2026/3/13 22:52:14] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:52:15] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:57:36] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 22:57:37] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 22:58:34] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1086
+[NowTime->2026/3/13 22:58:36] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 428
+[NowTime->2026/3/13 23:02:32] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:02:34] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:35] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:36] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:37] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:38] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:39] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:39] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:02:40] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:41] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:42] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:43] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:44] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:45] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:46] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:47] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:48] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:49] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:50] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:51] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:52] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:53] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:54] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:55] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:56] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:57] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:58] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:02:59] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:00] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:01] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:02] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:03] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:04] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:05] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:06] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:07] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:08] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:09] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:10] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:11] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:12] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:13] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:14] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:15] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:16] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:17] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:18] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:19] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:20] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:21] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:22] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:23] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:24] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:26] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:27] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:28] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:29] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:30] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:31] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:32] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:03:33] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:24] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:04:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:26] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:27] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:28] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:29] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:30] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:30] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:04:31] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:32] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:33] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:04:34] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:05:19] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:05:21] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:07:23] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:07:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:07:28] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1086
+[NowTime->2026/3/13 23:07:28] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:07:39] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1086
+[NowTime->2026/3/13 23:07:39] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:07:40] Log:界面刷新数据异常：System.NullReferenceException: Object reference not set to an instance of an object.
+   at ModbusToMQTT.fmMain.timer1_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 1086
+[NowTime->2026/3/13 23:07:40] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:07:41] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:06] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:08:08] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:09] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:10] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:11] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:12] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:13] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:13] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:08:14] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:15] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:16] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:17] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:18] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:19] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:20] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:21] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:22] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:23] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:24] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:26] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:27] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:28] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:29] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:30] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:31] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:32] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:33] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:34] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:35] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:36] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:37] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:38] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:39] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:40] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:41] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:42] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:43] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:44] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:45] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:46] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:47] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:48] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:49] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:50] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:51] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:52] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:53] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:54] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:55] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:56] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:57] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:58] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:08:59] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:00] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:01] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:02] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:03] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:04] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:05] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:06] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:07] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:08] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:09] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:10] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:11] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:12] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:13] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:14] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:15] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:16] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:17] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:18] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:19] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:20] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:21] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:22] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:23] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:24] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:26] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:55] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:09:56] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:57] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:58] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:09:59] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:01] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:01] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:02] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:10:02] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:03] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:04] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:05] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:06] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:10:07] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:14] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:12:16] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:17] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:18] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:19] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:20] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:21] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:21] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:12:22] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:23] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:24] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:25] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:26] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:27] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:12:28] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:31] Log:窗体加载报错：System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseUInt32(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.UInt16.Parse(String s, NumberStyles style, NumberFormatInfo info)
+   at ModbusToMQTT.fmMain..ctor() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 54
+[NowTime->2026/3/13 23:13:32] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:33] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:34] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:35] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:36] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:37] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:38] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host ':1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:13:38] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:39] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:40] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:41] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:42] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:43] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:44] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:45] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:46] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:47] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:48] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:49] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:50] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:51] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:52] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:53] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:54] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:55] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:56] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:57] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:58] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:13:59] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:00] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:01] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:02] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:03] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:04] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:05] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:06] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:07] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:14:09] Log:日期timer事件异常：System.IndexOutOfRangeException: Cannot find column 0.
+   at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   at ModbusToMQTT.fmMain.tmrDateTime_Tick(Object sender, EventArgs e) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 429
+[NowTime->2026/3/13 23:26:41] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:26:57] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:26:58] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:26:59] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:00] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:27:00] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:01] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:03] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:04] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:05] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:06] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:27:07] Log:Modbus客户端数据解析异常：System.ArgumentException: 数据长度不足188字节，实际为29字节
+Parameter name: data
+   at ModbusToMQTT.ModbusTCPClass.WeldData.FromBytes(Byte[] data) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\ModbusTCPClass.cs:line 1030
+   at ModbusToMQTT.fmMain.OnReceive(TcpClient sender, Byte[] bytes) in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 767
+[NowTime->2026/3/13 23:28:20] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__53.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 553
+[NowTime->2026/3/13 23:32:04] Log:MQTT客户端建立链接异常MQTTnet.Exceptions.MqttCommunicationException: Error while connecting with host '127.0.0.1:1885'. ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it [::ffff:127.0.0.1]:1885
+   at System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+   --- End of inner exception stack trace ---
+   at MQTTnet.Implementations.CrossPlatformSocket.<ConnectAsync>d__36.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Implementations.MqttTcpChannel.<ConnectAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Adapter.MqttChannelAdapter.<ConnectAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MQTTnet.Client.MqttClient.<ConnectAsync>d__49.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ModbusToMQTT.fmMain.<ConnectMqttServerAsync>d__54.MoveNext() in C:\Users\E1548073\Desktop\BYD_mes\ModbusToMQTT\ModbusToMQTT\fmMain.cs:line 554

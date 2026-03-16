@@ -130,10 +130,11 @@ namespace ModbusToMQTT
             this.tabMain.Controls.Add(this.tapStatusShow1);
             this.tabMain.Controls.Add(this.tapSetting);
             this.tabMain.DM_UseSelectable = true;
-            this.tabMain.Location = new System.Drawing.Point(-5, 82);
+            this.tabMain.Location = new System.Drawing.Point(-7, 101);
+            this.tabMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabMain.Name = "tabMain";
-            this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(1264, 743);
+            this.tabMain.SelectedIndex = 1;
+            this.tabMain.Size = new System.Drawing.Size(1685, 914);
             this.tabMain.TabIndex = 6;
             // 
             // tapLogShow
@@ -150,36 +151,39 @@ namespace ModbusToMQTT
             this.tapLogShow.DM_UseCustomBackColor = true;
             this.tapLogShow.DM_UseCustomForeColor = true;
             this.tapLogShow.DM_UseStyleColors = true;
-            this.tapLogShow.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tapLogShow.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tapLogShow.HorizontalScrollbarBarColor = true;
             this.tapLogShow.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tapLogShow.HorizontalScrollbarSize = 11;
+            this.tapLogShow.HorizontalScrollbarSize = 14;
             this.tapLogShow.Location = new System.Drawing.Point(4, 39);
+            this.tapLogShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tapLogShow.Name = "tapLogShow";
-            this.tapLogShow.Size = new System.Drawing.Size(1256, 700);
+            this.tapLogShow.Size = new System.Drawing.Size(1677, 871);
             this.tapLogShow.TabIndex = 0;
             this.tapLogShow.Text = "          首页          ";
             this.tapLogShow.VerticalScrollbarBarColor = true;
             this.tapLogShow.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tapLogShow.VerticalScrollbarSize = 10;
+            this.tapLogShow.VerticalScrollbarSize = 13;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(36, 434);
+            this.label22.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(48, 534);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(214, 22);
+            this.label22.Size = new System.Drawing.Size(269, 27);
             this.label22.TabIndex = 64;
             this.label22.Text = "Recipe MQTT VS Mudbus";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.label11.Location = new System.Drawing.Point(35, 132);
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label11.Location = new System.Drawing.Point(47, 162);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 20);
+            this.label11.Size = new System.Drawing.Size(82, 24);
             this.label11.TabIndex = 63;
             this.label11.Text = "历史记录";
             // 
@@ -188,10 +192,12 @@ namespace ModbusToMQTT
             this.grdDataLogA.AllowUserToOrderColumns = true;
             this.grdDataLogA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDataLogA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDataLogA.Location = new System.Drawing.Point(38, 467);
+            this.grdDataLogA.Location = new System.Drawing.Point(51, 575);
+            this.grdDataLogA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdDataLogA.Name = "grdDataLogA";
+            this.grdDataLogA.RowHeadersWidth = 51;
             this.grdDataLogA.RowTemplate.Height = 23;
-            this.grdDataLogA.Size = new System.Drawing.Size(1203, 191);
+            this.grdDataLogA.Size = new System.Drawing.Size(1604, 235);
             this.grdDataLogA.TabIndex = 62;
             // 
             // groupBox3
@@ -206,10 +212,12 @@ namespace ModbusToMQTT
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.groupBox3.Location = new System.Drawing.Point(38, 3);
+            this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.groupBox3.Location = new System.Drawing.Point(51, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1203, 126);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1604, 155);
             this.groupBox3.TabIndex = 61;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "任务报告";
@@ -217,85 +225,94 @@ namespace ModbusToMQTT
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("SimHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(850, 38);
+            this.label18.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(1133, 47);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(75, 16);
+            this.label18.Size = new System.Drawing.Size(93, 20);
             this.label18.TabIndex = 2;
             this.label18.Text = "不良计数";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("SimHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(634, 38);
+            this.label17.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(845, 47);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(143, 16);
+            this.label17.Size = new System.Drawing.Size(177, 20);
             this.label17.TabIndex = 2;
             this.label17.Text = "追加任务良品根数";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(861, 77);
+            this.label21.Location = new System.Drawing.Point(1148, 95);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(17, 20);
+            this.label21.Size = new System.Drawing.Size(21, 24);
             this.label21.TabIndex = 2;
             this.label21.Text = "0";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(678, 77);
+            this.label20.Location = new System.Drawing.Point(904, 95);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(17, 20);
+            this.label20.Size = new System.Drawing.Size(21, 24);
             this.label20.TabIndex = 2;
             this.label20.Text = "0";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(458, 77);
+            this.label19.Location = new System.Drawing.Point(611, 95);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(17, 20);
+            this.label19.Size = new System.Drawing.Size(21, 24);
             this.label19.TabIndex = 2;
             this.label19.Text = "0";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("SimHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(442, 38);
+            this.label16.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(589, 47);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 16);
+            this.label16.Size = new System.Drawing.Size(93, 20);
             this.label16.TabIndex = 2;
             this.label16.Text = "良品根数";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(45, 77);
+            this.label13.Location = new System.Drawing.Point(60, 95);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(87, 24);
             this.label13.TabIndex = 1;
             this.label13.Text = "1234567";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(208, 77);
+            this.label15.Location = new System.Drawing.Point(277, 95);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 20);
+            this.label15.Size = new System.Drawing.Size(83, 24);
             this.label15.TabIndex = 1;
             this.label15.Text = "Running";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("SimHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(208, 38);
+            this.label14.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(277, 47);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 16);
+            this.label14.Size = new System.Drawing.Size(97, 20);
             this.label14.TabIndex = 0;
             this.label14.Text = "JobState";
             this.label14.UseWaitCursor = true;
@@ -303,28 +320,31 @@ namespace ModbusToMQTT
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("SimHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(49, 38);
+            this.label12.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(65, 47);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 16);
+            this.label12.Size = new System.Drawing.Size(75, 20);
             this.label12.TabIndex = 0;
             this.label12.Text = "JobKey";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 672);
+            this.label2.Location = new System.Drawing.Point(103, 827);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 60;
             this.label2.Text = "运行中";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 672);
+            this.label1.Location = new System.Drawing.Point(20, 827);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(84, 20);
             this.label1.TabIndex = 60;
             this.label1.Text = "运行状态：";
             // 
@@ -335,17 +355,19 @@ namespace ModbusToMQTT
             this.grdHisLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdHisLog.DefaultCellStyle = dataGridViewCellStyle1;
-            this.grdHisLog.Location = new System.Drawing.Point(38, 158);
+            this.grdHisLog.Location = new System.Drawing.Point(51, 194);
+            this.grdHisLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdHisLog.Name = "grdHisLog";
             this.grdHisLog.ReadOnly = true;
+            this.grdHisLog.RowHeadersWidth = 51;
             this.grdHisLog.RowTemplate.Height = 23;
-            this.grdHisLog.Size = new System.Drawing.Size(1203, 261);
+            this.grdHisLog.Size = new System.Drawing.Size(1604, 321);
             this.grdHisLog.TabIndex = 59;
             // 
             // tapStatusShow1
@@ -356,18 +378,19 @@ namespace ModbusToMQTT
             this.tapStatusShow1.DM_UseCustomBackColor = true;
             this.tapStatusShow1.DM_UseCustomForeColor = true;
             this.tapStatusShow1.DM_UseStyleColors = true;
-            this.tapStatusShow1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tapStatusShow1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tapStatusShow1.HorizontalScrollbarBarColor = true;
             this.tapStatusShow1.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tapStatusShow1.HorizontalScrollbarSize = 11;
+            this.tapStatusShow1.HorizontalScrollbarSize = 14;
             this.tapStatusShow1.Location = new System.Drawing.Point(4, 39);
+            this.tapStatusShow1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tapStatusShow1.Name = "tapStatusShow1";
-            this.tapStatusShow1.Size = new System.Drawing.Size(1256, 700);
+            this.tapStatusShow1.Size = new System.Drawing.Size(1677, 871);
             this.tapStatusShow1.TabIndex = 1;
             this.tapStatusShow1.Text = "         参数设置         ";
             this.tapStatusShow1.VerticalScrollbarBarColor = true;
             this.tapStatusShow1.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tapStatusShow1.VerticalScrollbarSize = 10;
+            this.tapStatusShow1.VerticalScrollbarSize = 13;
             // 
             // pnlCommSettings
             // 
@@ -378,9 +401,10 @@ namespace ModbusToMQTT
             this.pnlCommSettings.Controls.Add(this.cbxModbusCmd);
             this.pnlCommSettings.Controls.Add(this.groupBox2);
             this.pnlCommSettings.Controls.Add(this.grpModbusTCPInfo);
-            this.pnlCommSettings.Location = new System.Drawing.Point(3, 3);
+            this.pnlCommSettings.Location = new System.Drawing.Point(4, 4);
+            this.pnlCommSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlCommSettings.Name = "pnlCommSettings";
-            this.pnlCommSettings.Size = new System.Drawing.Size(1250, 690);
+            this.pnlCommSettings.Size = new System.Drawing.Size(1667, 849);
             this.pnlCommSettings.TabIndex = 70;
             // 
             // groupBox1
@@ -389,47 +413,55 @@ namespace ModbusToMQTT
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtModbusSvrIP);
-            this.groupBox1.Location = new System.Drawing.Point(25, 20);
+            this.groupBox1.Location = new System.Drawing.Point(33, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 173);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(319, 213);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modbus TCP配置";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 101);
+            this.textBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.textBox2.Location = new System.Drawing.Point(120, 124);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(107, 36);
+            this.textBox2.Size = new System.Drawing.Size(141, 43);
             this.textBox2.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.label4.Location = new System.Drawing.Point(23, 104);
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label4.Location = new System.Drawing.Point(31, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(64, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "端口：";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.label3.Location = new System.Drawing.Point(23, 39);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.label3.Location = new System.Drawing.Point(31, 48);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 20);
+            this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "IP地址：";
             // 
             // txtModbusSvrIP
             // 
-            this.txtModbusSvrIP.Location = new System.Drawing.Point(90, 39);
+            this.txtModbusSvrIP.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.txtModbusSvrIP.Location = new System.Drawing.Point(120, 48);
+            this.txtModbusSvrIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModbusSvrIP.Multiline = true;
             this.txtModbusSvrIP.Name = "txtModbusSvrIP";
-            this.txtModbusSvrIP.Size = new System.Drawing.Size(140, 31);
+            this.txtModbusSvrIP.Size = new System.Drawing.Size(185, 37);
             this.txtModbusSvrIP.TabIndex = 81;
             // 
             // grpMQTTInfo
@@ -444,78 +476,88 @@ namespace ModbusToMQTT
             this.grpMQTTInfo.Controls.Add(this.lblMQTTUsernameTxt);
             this.grpMQTTInfo.Controls.Add(this.btnCommParamsSet1);
             this.grpMQTTInfo.Controls.Add(this.btnRestartServer1);
-            this.grpMQTTInfo.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.grpMQTTInfo.Location = new System.Drawing.Point(324, 24);
+            this.grpMQTTInfo.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.grpMQTTInfo.Location = new System.Drawing.Point(432, 30);
+            this.grpMQTTInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpMQTTInfo.Name = "grpMQTTInfo";
-            this.grpMQTTInfo.Size = new System.Drawing.Size(883, 169);
+            this.grpMQTTInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpMQTTInfo.Size = new System.Drawing.Size(1177, 208);
             this.grpMQTTInfo.TabIndex = 73;
             this.grpMQTTInfo.TabStop = false;
             this.grpMQTTInfo.Text = "MQTT参数设置";
             // 
             // txtMQTTPwd
             // 
-            this.txtMQTTPwd.Location = new System.Drawing.Point(450, 111);
+            this.txtMQTTPwd.Location = new System.Drawing.Point(600, 137);
+            this.txtMQTTPwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMQTTPwd.Name = "txtMQTTPwd";
-            this.txtMQTTPwd.Size = new System.Drawing.Size(140, 26);
+            this.txtMQTTPwd.Size = new System.Drawing.Size(185, 31);
             this.txtMQTTPwd.TabIndex = 88;
             // 
             // lblMQTTPwdTxt
             // 
-            this.lblMQTTPwdTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMQTTPwdTxt.Location = new System.Drawing.Point(343, 109);
+            this.lblMQTTPwdTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMQTTPwdTxt.Location = new System.Drawing.Point(457, 134);
+            this.lblMQTTPwdTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMQTTPwdTxt.Name = "lblMQTTPwdTxt";
-            this.lblMQTTPwdTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblMQTTPwdTxt.Size = new System.Drawing.Size(132, 38);
             this.lblMQTTPwdTxt.TabIndex = 83;
             this.lblMQTTPwdTxt.Text = "密码：";
             this.lblMQTTPwdTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtMQTTSvrIP
             // 
-            this.txtMQTTSvrIP.Location = new System.Drawing.Point(129, 50);
+            this.txtMQTTSvrIP.Location = new System.Drawing.Point(172, 62);
+            this.txtMQTTSvrIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMQTTSvrIP.Name = "txtMQTTSvrIP";
-            this.txtMQTTSvrIP.Size = new System.Drawing.Size(140, 26);
+            this.txtMQTTSvrIP.Size = new System.Drawing.Size(235, 31);
             this.txtMQTTSvrIP.TabIndex = 81;
             // 
             // lblMQTTSvrIPTxt
             // 
-            this.lblMQTTSvrIPTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMQTTSvrIPTxt.Location = new System.Drawing.Point(22, 47);
+            this.lblMQTTSvrIPTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMQTTSvrIPTxt.Location = new System.Drawing.Point(29, 58);
+            this.lblMQTTSvrIPTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMQTTSvrIPTxt.Name = "lblMQTTSvrIPTxt";
-            this.lblMQTTSvrIPTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblMQTTSvrIPTxt.Size = new System.Drawing.Size(132, 38);
             this.lblMQTTSvrIPTxt.TabIndex = 80;
             this.lblMQTTSvrIPTxt.Text = "服务器地址：";
             this.lblMQTTSvrIPTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtMQTTSvrPort
             // 
-            this.txtMQTTSvrPort.Location = new System.Drawing.Point(453, 50);
+            this.txtMQTTSvrPort.Location = new System.Drawing.Point(604, 62);
+            this.txtMQTTSvrPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMQTTSvrPort.Name = "txtMQTTSvrPort";
-            this.txtMQTTSvrPort.Size = new System.Drawing.Size(140, 26);
+            this.txtMQTTSvrPort.Size = new System.Drawing.Size(185, 31);
             this.txtMQTTSvrPort.TabIndex = 79;
             // 
             // lblMQTTSvrPortTxt
             // 
-            this.lblMQTTSvrPortTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMQTTSvrPortTxt.Location = new System.Drawing.Point(346, 47);
+            this.lblMQTTSvrPortTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMQTTSvrPortTxt.Location = new System.Drawing.Point(461, 58);
+            this.lblMQTTSvrPortTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMQTTSvrPortTxt.Name = "lblMQTTSvrPortTxt";
-            this.lblMQTTSvrPortTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblMQTTSvrPortTxt.Size = new System.Drawing.Size(132, 38);
             this.lblMQTTSvrPortTxt.TabIndex = 78;
             this.lblMQTTSvrPortTxt.Text = "服务器端口：";
             this.lblMQTTSvrPortTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtMQTTUsername
             // 
-            this.txtMQTTUsername.Location = new System.Drawing.Point(127, 115);
+            this.txtMQTTUsername.Location = new System.Drawing.Point(169, 142);
+            this.txtMQTTUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMQTTUsername.Name = "txtMQTTUsername";
-            this.txtMQTTUsername.Size = new System.Drawing.Size(140, 26);
+            this.txtMQTTUsername.Size = new System.Drawing.Size(238, 31);
             this.txtMQTTUsername.TabIndex = 77;
             // 
             // lblMQTTUsernameTxt
             // 
-            this.lblMQTTUsernameTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMQTTUsernameTxt.Location = new System.Drawing.Point(14, 111);
+            this.lblMQTTUsernameTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMQTTUsernameTxt.Location = new System.Drawing.Point(19, 137);
+            this.lblMQTTUsernameTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMQTTUsernameTxt.Name = "lblMQTTUsernameTxt";
-            this.lblMQTTUsernameTxt.Size = new System.Drawing.Size(107, 31);
+            this.lblMQTTUsernameTxt.Size = new System.Drawing.Size(143, 38);
             this.lblMQTTUsernameTxt.TabIndex = 76;
             this.lblMQTTUsernameTxt.Text = "用户名：";
             this.lblMQTTUsernameTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -524,11 +566,12 @@ namespace ModbusToMQTT
             // 
             this.btnCommParamsSet1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(103)))), ((int)(((byte)(156)))));
             this.btnCommParamsSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCommParamsSet1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCommParamsSet1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCommParamsSet1.ForeColor = System.Drawing.Color.White;
-            this.btnCommParamsSet1.Location = new System.Drawing.Point(687, 46);
+            this.btnCommParamsSet1.Location = new System.Drawing.Point(916, 57);
+            this.btnCommParamsSet1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCommParamsSet1.Name = "btnCommParamsSet1";
-            this.btnCommParamsSet1.Size = new System.Drawing.Size(183, 37);
+            this.btnCommParamsSet1.Size = new System.Drawing.Size(244, 46);
             this.btnCommParamsSet1.TabIndex = 68;
             this.btnCommParamsSet1.Text = "确定修改";
             this.btnCommParamsSet1.UseVisualStyleBackColor = false;
@@ -538,11 +581,12 @@ namespace ModbusToMQTT
             // 
             this.btnRestartServer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(178)))), ((int)(((byte)(115)))));
             this.btnRestartServer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestartServer1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
+            this.btnRestartServer1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
             this.btnRestartServer1.ForeColor = System.Drawing.Color.White;
-            this.btnRestartServer1.Location = new System.Drawing.Point(687, 102);
+            this.btnRestartServer1.Location = new System.Drawing.Point(916, 126);
+            this.btnRestartServer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRestartServer1.Name = "btnRestartServer1";
-            this.btnRestartServer1.Size = new System.Drawing.Size(183, 37);
+            this.btnRestartServer1.Size = new System.Drawing.Size(244, 46);
             this.btnRestartServer1.TabIndex = 69;
             this.btnRestartServer1.Text = "重启通讯";
             this.btnRestartServer1.UseVisualStyleBackColor = false;
@@ -550,10 +594,11 @@ namespace ModbusToMQTT
             // 
             // lblModbusCmdTxt
             // 
-            this.lblModbusCmdTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblModbusCmdTxt.Location = new System.Drawing.Point(947, 627);
+            this.lblModbusCmdTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblModbusCmdTxt.Location = new System.Drawing.Point(1263, 772);
+            this.lblModbusCmdTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModbusCmdTxt.Name = "lblModbusCmdTxt";
-            this.lblModbusCmdTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblModbusCmdTxt.Size = new System.Drawing.Size(132, 38);
             this.lblModbusCmdTxt.TabIndex = 83;
             this.lblModbusCmdTxt.Text = "读取命令：";
             this.lblModbusCmdTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -567,9 +612,10 @@ namespace ModbusToMQTT
             "02",
             "03",
             "04"});
-            this.cbxModbusCmd.Location = new System.Drawing.Point(1054, 628);
+            this.cbxModbusCmd.Location = new System.Drawing.Point(1405, 773);
+            this.cbxModbusCmd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxModbusCmd.Name = "cbxModbusCmd";
-            this.cbxModbusCmd.Size = new System.Drawing.Size(140, 25);
+            this.cbxModbusCmd.Size = new System.Drawing.Size(185, 28);
             this.cbxModbusCmd.TabIndex = 82;
             this.cbxModbusCmd.Visible = false;
             // 
@@ -587,10 +633,12 @@ namespace ModbusToMQTT
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox7);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.groupBox2.Location = new System.Drawing.Point(25, 337);
+            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.groupBox2.Location = new System.Drawing.Point(33, 415);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(931, 167);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1241, 206);
             this.groupBox2.TabIndex = 72;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modbus写入";
@@ -598,44 +646,49 @@ namespace ModbusToMQTT
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(766, 103);
+            this.textBox3.Location = new System.Drawing.Point(1021, 127);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 26);
+            this.textBox3.Size = new System.Drawing.Size(185, 31);
             this.textBox3.TabIndex = 87;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(653, 99);
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(871, 122);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 31);
+            this.label5.Size = new System.Drawing.Size(143, 38);
             this.label5.TabIndex = 86;
             this.label5.Text = "读取个数：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(453, 103);
+            this.textBox4.Location = new System.Drawing.Point(604, 127);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 26);
+            this.textBox4.Size = new System.Drawing.Size(185, 31);
             this.textBox4.TabIndex = 85;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(346, 100);
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(461, 123);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 31);
+            this.label6.Size = new System.Drawing.Size(132, 38);
             this.label6.TabIndex = 84;
             this.label6.Text = "起始地址：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(22, 102);
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(29, 126);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 31);
+            this.label7.Size = new System.Drawing.Size(132, 38);
             this.label7.TabIndex = 83;
             this.label7.Text = "读取命令：";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -648,58 +701,65 @@ namespace ModbusToMQTT
             "02",
             "03",
             "04"});
-            this.comboBox1.Location = new System.Drawing.Point(129, 103);
+            this.comboBox1.Location = new System.Drawing.Point(172, 127);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 28);
+            this.comboBox1.Size = new System.Drawing.Size(185, 31);
             this.comboBox1.TabIndex = 82;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(129, 50);
+            this.textBox5.Location = new System.Drawing.Point(172, 62);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 26);
+            this.textBox5.Size = new System.Drawing.Size(185, 31);
             this.textBox5.TabIndex = 81;
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(22, 47);
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(29, 58);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 31);
+            this.label8.Size = new System.Drawing.Size(132, 38);
             this.label8.TabIndex = 80;
             this.label8.Text = "从站ID：";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(453, 50);
+            this.textBox6.Location = new System.Drawing.Point(604, 62);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 26);
+            this.textBox6.Size = new System.Drawing.Size(185, 31);
             this.textBox6.TabIndex = 79;
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(346, 47);
+            this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(461, 58);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 31);
+            this.label9.Size = new System.Drawing.Size(132, 38);
             this.label9.TabIndex = 78;
             this.label9.Text = "从站端口：";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(766, 50);
+            this.textBox7.Location = new System.Drawing.Point(1021, 62);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 26);
+            this.textBox7.Size = new System.Drawing.Size(185, 31);
             this.textBox7.TabIndex = 77;
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(653, 46);
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(871, 57);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 31);
+            this.label10.Size = new System.Drawing.Size(143, 38);
             this.label10.TabIndex = 76;
             this.label10.Text = "从站地址号：";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -712,10 +772,12 @@ namespace ModbusToMQTT
             this.grpModbusTCPInfo.Controls.Add(this.txtModbusStartAddress);
             this.grpModbusTCPInfo.Controls.Add(this.lblModbusStartAddressTxt);
             this.grpModbusTCPInfo.Controls.Add(this.lblModbusSvrIPTxt);
-            this.grpModbusTCPInfo.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F);
-            this.grpModbusTCPInfo.Location = new System.Drawing.Point(25, 199);
+            this.grpModbusTCPInfo.Font = new System.Drawing.Font("微软雅黑", 10.5F);
+            this.grpModbusTCPInfo.Location = new System.Drawing.Point(33, 245);
+            this.grpModbusTCPInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpModbusTCPInfo.Name = "grpModbusTCPInfo";
-            this.grpModbusTCPInfo.Size = new System.Drawing.Size(931, 109);
+            this.grpModbusTCPInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpModbusTCPInfo.Size = new System.Drawing.Size(1241, 134);
             this.grpModbusTCPInfo.TabIndex = 72;
             this.grpModbusTCPInfo.TabStop = false;
             this.grpModbusTCPInfo.Text = "Modbus读取";
@@ -723,52 +785,58 @@ namespace ModbusToMQTT
             // 
             // txtModbusReadCount
             // 
-            this.txtModbusReadCount.Location = new System.Drawing.Point(751, 53);
+            this.txtModbusReadCount.Location = new System.Drawing.Point(1001, 65);
+            this.txtModbusReadCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModbusReadCount.Name = "txtModbusReadCount";
-            this.txtModbusReadCount.Size = new System.Drawing.Size(140, 26);
+            this.txtModbusReadCount.Size = new System.Drawing.Size(185, 31);
             this.txtModbusReadCount.TabIndex = 87;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 43);
+            this.textBox1.Location = new System.Drawing.Point(164, 53);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 36);
+            this.textBox1.Size = new System.Drawing.Size(141, 43);
             this.textBox1.TabIndex = 1;
             // 
             // lblModbusReadCountTxt
             // 
-            this.lblModbusReadCountTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblModbusReadCountTxt.Location = new System.Drawing.Point(638, 49);
+            this.lblModbusReadCountTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblModbusReadCountTxt.Location = new System.Drawing.Point(851, 60);
+            this.lblModbusReadCountTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModbusReadCountTxt.Name = "lblModbusReadCountTxt";
-            this.lblModbusReadCountTxt.Size = new System.Drawing.Size(107, 31);
+            this.lblModbusReadCountTxt.Size = new System.Drawing.Size(143, 38);
             this.lblModbusReadCountTxt.TabIndex = 86;
             this.lblModbusReadCountTxt.Text = "读取数量：";
             this.lblModbusReadCountTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtModbusStartAddress
             // 
-            this.txtModbusStartAddress.Location = new System.Drawing.Point(438, 53);
+            this.txtModbusStartAddress.Location = new System.Drawing.Point(584, 65);
+            this.txtModbusStartAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtModbusStartAddress.Name = "txtModbusStartAddress";
-            this.txtModbusStartAddress.Size = new System.Drawing.Size(140, 26);
+            this.txtModbusStartAddress.Size = new System.Drawing.Size(185, 31);
             this.txtModbusStartAddress.TabIndex = 85;
             // 
             // lblModbusStartAddressTxt
             // 
-            this.lblModbusStartAddressTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblModbusStartAddressTxt.Location = new System.Drawing.Point(331, 50);
+            this.lblModbusStartAddressTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblModbusStartAddressTxt.Location = new System.Drawing.Point(441, 62);
+            this.lblModbusStartAddressTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModbusStartAddressTxt.Name = "lblModbusStartAddressTxt";
-            this.lblModbusStartAddressTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblModbusStartAddressTxt.Size = new System.Drawing.Size(132, 38);
             this.lblModbusStartAddressTxt.TabIndex = 84;
             this.lblModbusStartAddressTxt.Text = "起始地址：";
             this.lblModbusStartAddressTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblModbusSvrIPTxt
             // 
-            this.lblModbusSvrIPTxt.Font = new System.Drawing.Font("Microsoft YaHei", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblModbusSvrIPTxt.Location = new System.Drawing.Point(22, 47);
+            this.lblModbusSvrIPTxt.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblModbusSvrIPTxt.Location = new System.Drawing.Point(29, 58);
+            this.lblModbusSvrIPTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModbusSvrIPTxt.Name = "lblModbusSvrIPTxt";
-            this.lblModbusSvrIPTxt.Size = new System.Drawing.Size(99, 31);
+            this.lblModbusSvrIPTxt.Size = new System.Drawing.Size(132, 38);
             this.lblModbusSvrIPTxt.TabIndex = 80;
             this.lblModbusSvrIPTxt.Text = "从站ID：";
             this.lblModbusSvrIPTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -777,9 +845,10 @@ namespace ModbusToMQTT
             // 
             this.picStatusShowLogoWF1.BackColor = System.Drawing.Color.Transparent;
             this.picStatusShowLogoWF1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picStatusShowLogoWF1.Location = new System.Drawing.Point(648, 541);
+            this.picStatusShowLogoWF1.Location = new System.Drawing.Point(864, 666);
+            this.picStatusShowLogoWF1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picStatusShowLogoWF1.Name = "picStatusShowLogoWF1";
-            this.picStatusShowLogoWF1.Size = new System.Drawing.Size(24, 22);
+            this.picStatusShowLogoWF1.Size = new System.Drawing.Size(32, 27);
             this.picStatusShowLogoWF1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picStatusShowLogoWF1.TabIndex = 60;
             this.picStatusShowLogoWF1.TabStop = false;
@@ -792,34 +861,37 @@ namespace ModbusToMQTT
             this.tapSetting.DM_UseCustomBackColor = true;
             this.tapSetting.DM_UseCustomForeColor = true;
             this.tapSetting.DM_UseStyleColors = true;
-            this.tapSetting.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tapSetting.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tapSetting.HorizontalScrollbarBarColor = true;
             this.tapSetting.HorizontalScrollbarDM_HighlightOnWheel = false;
-            this.tapSetting.HorizontalScrollbarSize = 11;
+            this.tapSetting.HorizontalScrollbarSize = 14;
             this.tapSetting.Location = new System.Drawing.Point(4, 39);
+            this.tapSetting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tapSetting.Name = "tapSetting";
-            this.tapSetting.Size = new System.Drawing.Size(1256, 700);
+            this.tapSetting.Size = new System.Drawing.Size(1677, 871);
             this.tapSetting.TabIndex = 2;
             this.tapSetting.Text = "         运行日志         ";
             this.tapSetting.VerticalScrollbarBarColor = true;
             this.tapSetting.VerticalScrollbarDM_HighlightOnWheel = false;
-            this.tapSetting.VerticalScrollbarSize = 10;
+            this.tapSetting.VerticalScrollbarSize = 13;
             // 
             // pnlLogShow
             // 
             this.pnlLogShow.BackColor = System.Drawing.Color.White;
             this.pnlLogShow.Controls.Add(this.pnlList);
             this.pnlLogShow.Controls.Add(this.btnClearLog);
-            this.pnlLogShow.Location = new System.Drawing.Point(13, 18);
+            this.pnlLogShow.Location = new System.Drawing.Point(17, 22);
+            this.pnlLogShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogShow.Name = "pnlLogShow";
-            this.pnlLogShow.Size = new System.Drawing.Size(1240, 675);
+            this.pnlLogShow.Size = new System.Drawing.Size(1653, 831);
             this.pnlLogShow.TabIndex = 61;
             // 
             // pnlList
             // 
-            this.pnlList.Location = new System.Drawing.Point(11, 9);
+            this.pnlList.Location = new System.Drawing.Point(15, 11);
+            this.pnlList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlList.Name = "pnlList";
-            this.pnlList.Size = new System.Drawing.Size(1216, 593);
+            this.pnlList.Size = new System.Drawing.Size(1621, 730);
             this.pnlList.TabIndex = 12;
             // 
             // btnClearLog
@@ -827,11 +899,12 @@ namespace ModbusToMQTT
             this.btnClearLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(153)))), ((int)(((byte)(252)))));
             this.btnClearLog.FlatAppearance.BorderSize = 0;
             this.btnClearLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearLog.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnClearLog.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnClearLog.ForeColor = System.Drawing.Color.White;
-            this.btnClearLog.Location = new System.Drawing.Point(11, 608);
+            this.btnClearLog.Location = new System.Drawing.Point(15, 748);
+            this.btnClearLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClearLog.Name = "btnClearLog";
-            this.btnClearLog.Size = new System.Drawing.Size(272, 34);
+            this.btnClearLog.Size = new System.Drawing.Size(363, 42);
             this.btnClearLog.TabIndex = 10;
             this.btnClearLog.Text = "清空日志";
             this.btnClearLog.UseVisualStyleBackColor = false;
@@ -841,9 +914,10 @@ namespace ModbusToMQTT
             // 
             this.picSettingLogoWF.BackColor = System.Drawing.Color.Transparent;
             this.picSettingLogoWF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picSettingLogoWF.Location = new System.Drawing.Point(648, 541);
+            this.picSettingLogoWF.Location = new System.Drawing.Point(864, 666);
+            this.picSettingLogoWF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picSettingLogoWF.Name = "picSettingLogoWF";
-            this.picSettingLogoWF.Size = new System.Drawing.Size(24, 22);
+            this.picSettingLogoWF.Size = new System.Drawing.Size(32, 27);
             this.picSettingLogoWF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picSettingLogoWF.TabIndex = 60;
             this.picSettingLogoWF.TabStop = false;
@@ -851,21 +925,23 @@ namespace ModbusToMQTT
             // lblLogShowCopyRightText
             // 
             this.lblLogShowCopyRightText.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogShowCopyRightText.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblLogShowCopyRightText.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblLogShowCopyRightText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(52)))), ((int)(((byte)(127)))));
-            this.lblLogShowCopyRightText.Location = new System.Drawing.Point(1042, 62);
+            this.lblLogShowCopyRightText.Location = new System.Drawing.Point(1389, 76);
+            this.lblLogShowCopyRightText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogShowCopyRightText.Name = "lblLogShowCopyRightText";
-            this.lblLogShowCopyRightText.Size = new System.Drawing.Size(214, 22);
+            this.lblLogShowCopyRightText.Size = new System.Drawing.Size(285, 27);
             this.lblLogShowCopyRightText.TabIndex = 57;
             this.lblLogShowCopyRightText.Text = "CopyRight©Branson Ultrsonic.,Ltd";
             this.lblLogShowCopyRightText.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // lblVersion
             // 
-            this.lblVersion.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblVersion.Location = new System.Drawing.Point(1096, 14);
+            this.lblVersion.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblVersion.Location = new System.Drawing.Point(1461, 17);
+            this.lblVersion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(157, 22);
+            this.lblVersion.Size = new System.Drawing.Size(209, 27);
             this.lblVersion.TabIndex = 117;
             this.lblVersion.Text = "版本号：V1.0.0.0";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -878,19 +954,21 @@ namespace ModbusToMQTT
             this.pnlTop.Controls.Add(this.lblTime);
             this.pnlTop.Controls.Add(this.lblDate);
             this.pnlTop.Controls.Add(this.lblLogShowCopyRightText);
-            this.pnlTop.Location = new System.Drawing.Point(-1, -4);
+            this.pnlTop.Location = new System.Drawing.Point(-1, -5);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1263, 87);
+            this.pnlTop.Size = new System.Drawing.Size(1684, 107);
             this.pnlTop.TabIndex = 5;
             // 
             // lblMainTitle
             // 
             this.lblMainTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblMainTitle.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMainTitle.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblMainTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
-            this.lblMainTitle.Location = new System.Drawing.Point(400, 14);
+            this.lblMainTitle.Location = new System.Drawing.Point(533, 17);
+            this.lblMainTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(484, 52);
+            this.lblMainTitle.Size = new System.Drawing.Size(645, 64);
             this.lblMainTitle.TabIndex = 8;
             this.lblMainTitle.Text = "Modbus-MQTT Gateway";
             this.lblMainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -898,11 +976,12 @@ namespace ModbusToMQTT
             // lblTime
             // 
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTime.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
-            this.lblTime.Location = new System.Drawing.Point(3, 44);
+            this.lblTime.Location = new System.Drawing.Point(4, 54);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(163, 25);
+            this.lblTime.Size = new System.Drawing.Size(217, 31);
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "00:00:00";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -910,11 +989,12 @@ namespace ModbusToMQTT
             // lblDate
             // 
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDate.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
-            this.lblDate.Location = new System.Drawing.Point(13, 14);
+            this.lblDate.Location = new System.Drawing.Point(17, 17);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(168, 25);
+            this.lblDate.Size = new System.Drawing.Size(224, 31);
             this.lblDate.TabIndex = 6;
             this.lblDate.Text = "2017-01-01";
             this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -937,12 +1017,13 @@ namespace ModbusToMQTT
             // 
             // fmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 824);
+            this.ClientSize = new System.Drawing.Size(1685, 1014);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.pnlTop);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "fmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -45,57 +45,8 @@ namespace ModbusToMQTT
 
                 #region 从配置文件中读取参数
 
-                //lblMainTitle.Text = gIni.ReadString("Params", "MainTitleText", "");
-                //this.Text = gIni.ReadString("Params", "MainTitleText", "");
-
-                txtMQTTSvrIP.Text = gIni.ReadString("MQTTParams", "MqttServerIP", "");
-                gMQTTSvrIP = gIni.ReadString("MQTTParams", "MqttServerIP", "");
-                txtMQTTSvrPort.Text = gIni.ReadString("MQTTParams", "MqttServerPort", "");
-                gMQTTSvrPort = ushort.Parse(gIni.ReadString("MQTTParams", "MqttServerPort", ""));
-                txtMQTTUsername.Text = gIni.ReadString("MQTTParams", "MQTTUsername", "");
-                gMQTTUsername = gIni.ReadString("MQTTParams", "MQTTUsername", "");
-                txtMQTTPwd.Text = gIni.ReadString("MQTTParams", "MQTTPwd", "");
-                gMQTTPwd = gIni.ReadString("MQTTParams", "MQTTPwd", "");
-
-
-
-                txtModbusSvrIP.Text = gIni.ReadString("ModbusTCPParams", "ModbusSvrIP", "");
-                gModbusSvrIP = gIni.ReadString("ModbusTCPParams", "ModbusSvrIP", "");
-                textBox2.Text = gIni.ReadString("ModbusTCPParams", "ModbusSvrPort", "");
-                gModbusSvrPort = ushort.Parse(gIni.ReadString("ModbusTCPParams", "ModbusSvrPort", ""));
-                textBox1.Text = gIni.ReadString("ModbusTCPParams", "SlaveID", "");
-                gModbusSlaveID = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "SlaveID", ""));
-                txtModbusStartAddress.Text = gIni.ReadString("ModbusTCPParams", "ModbusStartAdd", "");
-                gModbusStartAdd = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "ModbusStartAdd", ""));
-                txtModbusReadCount.Text = gIni.ReadString("ModbusTCPParams", "ModbusReadCount", "");
-                gModbusReadCount = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "ModbusReadCount", ""));
-
-                if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "1")
-                {
-                    gModbusCmd = 1;
-                    cbxModbusCmd.SelectedIndex = 0;
-                }
-                else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "2")
-                {
-                    gModbusCmd = 2;
-                    cbxModbusCmd.SelectedIndex = 1;
-                }
-                else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "3")
-                {
-                    gModbusCmd = 3;
-                    cbxModbusCmd.SelectedIndex = 2;
-                }
-                else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "4")
-                {
-                    gModbusCmd = 4;
-                    cbxModbusCmd.SelectedIndex = 3;
-                }
-                else
-                {
-                    gModbusCmd = 3;
-                    cbxModbusCmd.SelectedIndex = 2;
-                }
-
+                iniParamRead();
+                
                 #endregion
 
                 #region Modbus TCP 客户端事件绑定
@@ -162,6 +113,7 @@ namespace ModbusToMQTT
         }
 
         #region 全局变量
+        int initRecipeFlag = 0;             //初始化配方表标志，0未初始化，1已初始化
 
         int[] jobCnt = new int[3]; // 0:良品数； 1：追加任务良品数； 2：不良数；
         int weldCnt = 0;            //焊接计数
@@ -247,7 +199,25 @@ namespace ModbusToMQTT
         ModbusTCPClass gModbusTCPClass = new ModbusTCPClass();                                                            //ModbusTCP类实例
         MesMsg  mesMsg = new MesMsg();
 
-        //MQTT参数声明
+
+        public struct DefaultConfig
+        {
+            // MQTT constants
+            public const string DefaultMqttServerIP = "127.0.0.1";
+            public const ushort DefaultMqttServerPort = 1883;
+            public const string DefaultMqttUsername = "admin";
+            public const string DefaultMqttPassword = "123456";
+
+            // Modbus constants
+            public const string DefaultModbusServerIP = "127.0.0.1";
+            public const ushort DefaultModbusServerPort = 502;
+            public const int DefaultModbusSlaveID = 1;
+            public const int DefaultModbusCommand = 3;
+            public const int DefaultModbusStartAddress = 6800;
+            public const int DefaultModbusReadCount = 100;
+        }
+
+            //MQTT参数声明
         string gMQTTSvrIP = "127.0.0.1";
         ushort gMQTTSvrPort = 1885;
         string gMQTTUsername = "admin";
@@ -328,6 +298,107 @@ namespace ModbusToMQTT
 
         #region 参数设置界面
 
+        void iniParamRead()
+        {
+            //lblMainTitle.Text = gIni.ReadString("Params", "MainTitleText", "");
+            //this.Text = gIni.ReadString("Params", "MainTitleText", "");
+
+            gMQTTSvrIP = gIni.ReadString("MQTTParams", "MqttServerIP", DefaultConfig.DefaultMqttServerIP);
+            txtMQTTSvrIP.Text = gMQTTSvrIP;
+            gMQTTSvrPort = (ushort)gIni.ReadInteger("MQTTParams", "MqttServerPort", DefaultConfig.DefaultMqttServerPort);
+            if (gMQTTSvrPort < 0 || gMQTTSvrPort > 65535)
+            {
+                gMQTTSvrPort = DefaultConfig.DefaultMqttServerPort;
+            }
+            txtMQTTSvrPort.Text = gMQTTSvrPort.ToString();
+            gMQTTUsername = gIni.ReadString("MQTTParams", "MQTTUsername", DefaultConfig.DefaultMqttUsername);
+            txtMQTTUsername.Text = gMQTTUsername.ToString();
+            gMQTTPwd = gIni.ReadString("MQTTParams", "MQTTPwd", DefaultConfig.DefaultMqttPassword);
+            txtMQTTPwd.Text = gMQTTPwd.ToString();
+
+
+            gModbusSvrIP = gIni.ReadString("ModbusTCPParams", "ModbusSvrIP", DefaultConfig.DefaultModbusServerIP);
+            txtModbusSvrIP.Text = gModbusSvrIP.ToString();
+            gModbusSvrPort = (ushort)gIni.ReadInteger("ModbusTCPParams", "ModbusSvrPort", DefaultConfig.DefaultModbusServerPort);
+            if (gModbusSvrPort < 0 || gModbusSvrPort > 65535)
+            {
+                gModbusSvrPort = DefaultConfig.DefaultModbusServerPort;
+            }
+            textBox2.Text = gModbusSvrPort.ToString();
+            gModbusSlaveID = gIni.ReadInteger("ModbusTCPParams", "SlaveID", DefaultConfig.DefaultModbusSlaveID);
+            textBox1.Text = gModbusSlaveID.ToString();
+            gModbusStartAdd = gIni.ReadInteger("ModbusTCPParams", "ModbusStartAdd", DefaultConfig.DefaultModbusStartAddress);
+            txtModbusStartAddress.Text = gModbusStartAdd.ToString();
+            gModbusReadCount = gIni.ReadInteger("ModbusTCPParams", "ModbusReadCount", DefaultConfig.DefaultModbusReadCount);
+            txtModbusReadCount.Text = gModbusReadCount.ToString();
+
+            gModbusCmd = gIni.ReadInteger("ModbusTCPParams", "ModbusCmd", DefaultConfig.DefaultModbusCommand);
+            gModbusCmd = 3;  //此处强制指定为读保持寄存器命令，后续版本可以增加选择功能
+            cbxModbusCmd.SelectedIndex = 2;
+
+        }
+        void iniParamWrite()
+        {
+            int tempInt = 0;
+
+            gIni.WriteString("MQTTParams", "MqttServerIP", txtMQTTSvrIP.Text.Trim());
+            if (!int.TryParse(txtMQTTSvrPort.Text, out tempInt))
+            {
+                MessageBox.Show("MQTT端口号不是有效的数据格式");
+                return;
+            }
+            if (tempInt < 0 || tempInt > 65535)
+            {
+                MessageBox.Show("MQTT服务器端口号必须在0-65535之间！");
+                return;
+            }
+            else
+            {
+                gIni.WriteInteger("MQTTParams", "MqttServerPort", tempInt);
+            }
+            gIni.WriteString("MQTTParams", "MQTTUsername", txtMQTTUsername.Text.Trim());
+            gIni.WriteString("MQTTParams", "MQTTPwd", txtMQTTPwd.Text.Trim());
+
+
+            gIni.WriteString("ModbusTCPParams", "ModbusSvrIP", txtModbusSvrIP.Text.Trim());
+            if (!int.TryParse(textBox2.Text, out tempInt))
+            {
+                MessageBox.Show("Modbus端口号不是有效的数据格式");
+                return;
+            }
+            if (tempInt < 0 || tempInt > 65535)
+            {
+                MessageBox.Show("Modbus服务器端口号必须在0-65535之间！");
+                return;
+            }
+            else
+            {
+                gIni.WriteInteger("ModbusTCPParams", "ModbusSvrPort", tempInt);
+            }
+
+            if (!int.TryParse(textBox1.Text, out tempInt))
+            {
+                MessageBox.Show("Modbus从站ID不是有效的数据格式");
+                return;
+            }
+            gIni.WriteInteger("ModbusTCPParams", "SlaveID", tempInt);
+
+            if (!int.TryParse(txtModbusStartAddress.Text, out tempInt))
+            {
+                MessageBox.Show("Modbus起始地址不是有效的数据格式");
+                return;
+            }
+            gIni.WriteInteger("ModbusTCPParams", "ModbusStartAdd", tempInt);
+
+            if (!int.TryParse(txtModbusReadCount.Text, out tempInt))
+            {
+                MessageBox.Show("Modbus读取数量不是有效的数据格式");
+                return;
+            }
+            gIni.WriteInteger("ModbusTCPParams", "ModbusReadCount", tempInt);
+
+            gIni.WriteInteger("ModbusTCPParams", "ModbusCmd", (cbxModbusCmd.SelectedIndex + 1));
+        }
         /// <summary>
         /// 参数设置界面确认修改按键
         /// </summary>
@@ -336,54 +407,10 @@ namespace ModbusToMQTT
         private void btnCommParamsSet1_Click(object sender, EventArgs e)
         {
 
-            gIni.WriteString("MQTTParams", "MqttServerIP", txtMQTTSvrIP.Text.Trim());
-            gIni.WriteString("MQTTParams", "MqttServerPort", txtMQTTSvrPort.Text.Trim());
-            gIni.WriteString("MQTTParams", "MQTTUsername", txtMQTTUsername.Text.Trim());
-            gIni.WriteString("MQTTParams", "MQTTPwd", txtMQTTPwd.Text.Trim());
-
-
-            gIni.WriteString("ModbusTCPParams", "ModbusSvrIP", txtModbusSvrIP.Text.Trim());
-            gIni.WriteString("ModbusTCPParams", "ModbusSvrPort", textBox2.Text.Trim());
-            gIni.WriteString("ModbusTCPParams", "SlaveID", textBox1.Text.Trim());
-            gIni.WriteString("ModbusTCPParams", "ModbusStartAdd", txtModbusStartAddress.Text.Trim());
-            gIni.WriteString("ModbusTCPParams", "ModbusReadCount", txtModbusReadCount.Text.Trim());
-            gIni.WriteString("ModbusTCPParams", "ModbusCmd", (cbxModbusCmd.SelectedIndex + 1).ToString().Trim());
-
+            iniParamWrite();
             MessageBox.Show("参数修改成功！");
-
-            gMQTTSvrIP = gIni.ReadString("MQTTParams", "MqttServerIP", "");
-            gMQTTSvrPort = ushort.Parse(gIni.ReadString("MQTTParams", "MqttServerPort", ""));
-            gMQTTUsername = gIni.ReadString("MQTTParams", "MQTTUsername", "");
-            gMQTTPwd = gIni.ReadString("MQTTParams", "MQTTPwd", "");
-            gMQTTPubTime = Convert.ToInt32(gIni.ReadString("MQTTParams", "MQTTPubTime", ""));
-
-            gModbusSvrIP = gIni.ReadString("ModbusTCPParams", "ModbusSvrIP", "");
-            gModbusSvrPort = ushort.Parse(gIni.ReadString("ModbusTCPParams", "ModbusSvrPort", ""));
-            gModbusSlaveID = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "SlaveID", ""));
-            gModbusStartAdd = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "ModbusStartAdd", ""));
-            gModbusReadCount = Convert.ToInt32(gIni.ReadString("ModbusTCPParams", "ModbusReadCount", ""));
-
-            if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "1")
-            {
-                gModbusCmd = 1;
-            }
-            else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "2")
-            {
-                gModbusCmd = 2;
-            }
-            else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "3")
-            {
-                gModbusCmd = 3;
-            }
-            else if (gIni.ReadString("ModbusTCPParams", "ModbusCmd", "") == "4")
-            {
-                gModbusCmd = 4;
-            }
-            else
-            {
-                gModbusCmd = 3;
-            }
-
+            iniParamRead();
+            
         }
 
         /// <summary>
@@ -533,6 +560,11 @@ namespace ModbusToMQTT
 
         private async Task ConnectMqttServerAsync()
         {
+            var tlsParameters = new MqttClientOptionsBuilderTlsParameters
+            {
+                UseTls = true,
+                SslProtocol = System.Security.Authentication.SslProtocols.Tls12,
+            };
             try
             {
                 mqttClient = new MqttFactory().CreateMqttClient();
@@ -541,8 +573,9 @@ namespace ModbusToMQTT
                 .WithTcpServer(gMQTTSvrIP, gMQTTSvrPort)
                 .WithCredentials(gMQTTUsername, gMQTTPwd)
                 .WithCleanSession(true)
-                .WithProtocolVersion(MqttProtocolVersion.V311)
+                .WithProtocolVersion(MqttProtocolVersion.V500)
                 .WithKeepAlivePeriod(TimeSpan.FromSeconds(2))
+                .WithTls(tlsParameters)
                 .Build();
 
                 mqttClient.ConnectedAsync += _mqttClient_ConnectedAsync;
@@ -1062,7 +1095,7 @@ namespace ModbusToMQTT
                     if (gDtLogInfo.Rows.Count > 1000)
                     {
                         //保持最新的1000行
-                        gDtLogInfo.Rows.RemoveAt(0);
+                        gDtLogInfo.Rows.RemoveAt(999);
                     }
                     else
                     {
@@ -1071,7 +1104,6 @@ namespace ModbusToMQTT
 
                     //保证表格一直显示在最新一行
                     //grdHisLog.FirstDisplayedScrollingRowIndex = gDtLogInfo.Rows.Count;
-
                 }
 
                 Thread.Sleep(100);
@@ -1082,52 +1114,17 @@ namespace ModbusToMQTT
         {
             label2.Text = deviceStateCnStr[deviceState];
 
-            drA[0][3] = weldData.CurrentRecipeName;
-            drA[1][3] = weldData.SettingWeldPressure;
-            drA[2][3] = weldData.SettingAmplitude;
-            drA[3][3] = weldData.SettingEnergy;
-            drA[4][3] = weldData.SettingPreheightHighLimit;
-            drA[5][3] = weldData.SettingPreheightLowLimit;
-            drA[6][3] = weldData.SettingTimeHighLimit;
-            drA[7][3] = weldData.SettingTimeLowLimit;
-            drA[8][3] = weldData.SettingPowerHighLimit;
-            drA[9][3] = weldData.SettingPowerLowLimit;
-            drA[10][3] = weldData.SettingPostHeightHighLimit;
-            drA[11][3] = weldData.SettingPostHeightLowLimit;
-            drA[12][3] = weldData.SettingTriggerPresssure;
-
-            drA[0][2] = articleData.RecipeName;
-            drA[1][2] = articleData.SettingWeldPressure;
-            drA[2][2] = articleData.SettingAmplitude;
-            drA[3][2] = articleData.SettingEnergy;
-            drA[4][2] = articleData.SettingPreheightHighLimit;
-            drA[5][2] = articleData.SettingPreheightLowLimit;
-            drA[6][2] = articleData.SettingTimeHighLimit;
-            drA[7][2] = articleData.SettingTimeLowLimit;
-            drA[8][2] = articleData.SettingPowerHighLimit;
-            drA[9][2] = articleData.SettingPowerLowLimit;
-            drA[10][2] = articleData.SettingPostHeightHighLimit;
-            drA[11][2] = articleData.SettingPostHeightLowLimit;
-            drA[12][2] = articleData.SettingTriggerPresssure;
-
-            for(int i = 0;i<13;i++)
-            {
-                if (drA[i][2].ToString() != drA[i][3].ToString())
-                {
-                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-                }
-                else
-                {
-                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.White;
-                }
-            }
-
             label13.Text = jobData.Key;
             label15.Text = jobData.JobRequestState;
 
             label19.Text = jobCnt[0].ToString();
             label20.Text = jobCnt[1].ToString();
             label21.Text = jobCnt[2].ToString();
+
+            if(initRecipeFlag == 1)
+            {
+                UpdateRecipeTable();
+            }
         }
 
         public void InitRecipeTable()
@@ -1157,11 +1154,50 @@ namespace ModbusToMQTT
                 drA[i][3] = "NA";
                 gDtLogInfoA.Rows.Add(drA[i]);
             }
+            initRecipeFlag = 1;
         }
 
         public void UpdateRecipeTable()
         {
+            drA[0][3] = weldData.CurrentRecipeName;
+            drA[1][3] = weldData.SettingWeldPressure;
+            drA[2][3] = weldData.SettingAmplitude;
+            drA[3][3] = weldData.SettingEnergy;
+            drA[4][3] = weldData.SettingPreheightHighLimit;
+            drA[5][3] = weldData.SettingPreheightLowLimit;
+            drA[6][3] = weldData.SettingTimeHighLimit;
+            drA[7][3] = weldData.SettingTimeLowLimit;
+            drA[8][3] = weldData.SettingPowerHighLimit;
+            drA[9][3] = weldData.SettingPowerLowLimit;
+            drA[10][3] = weldData.SettingPostHeightHighLimit;
+            drA[11][3] = weldData.SettingPostHeightLowLimit;
+            drA[12][3] = weldData.SettingTriggerPresssure;
 
+            drA[0][2] = articleData.RecipeName;
+            drA[1][2] = articleData.SettingWeldPressure;
+            drA[2][2] = articleData.SettingAmplitude;
+            drA[3][2] = articleData.SettingEnergy;
+            drA[4][2] = articleData.SettingPreheightHighLimit;
+            drA[5][2] = articleData.SettingPreheightLowLimit;
+            drA[6][2] = articleData.SettingTimeHighLimit;
+            drA[7][2] = articleData.SettingTimeLowLimit;
+            drA[8][2] = articleData.SettingPowerHighLimit;
+            drA[9][2] = articleData.SettingPowerLowLimit;
+            drA[10][2] = articleData.SettingPostHeightHighLimit;
+            drA[11][2] = articleData.SettingPostHeightLowLimit;
+            drA[12][2] = articleData.SettingTriggerPresssure;
+
+            for (int i = 0; i < 13; i++)
+            {
+                if (drA[i][2].ToString() != drA[i][3].ToString())
+                {
+                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    grdDataLogA.Rows[i].DefaultCellStyle.BackColor = Color.White;
+                }
+            }
 
         }
     }
